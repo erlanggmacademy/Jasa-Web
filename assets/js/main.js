@@ -219,8 +219,10 @@
       const isPortfolioSubpage = window.location.pathname.includes('/portofolio/') || currentPath.includes('portofolio');
       const isBlogSubpage = window.location.pathname.includes('/blog/') || currentPath.includes('blog');
       // Check if this link represents the current page
-      const isCurrentPage = (linkPath === currentPath) || 
-                            (currentPath === '' && (linkPath === 'index.html' || linkPath === '')) ||
+      const isHomeLink = linkHref === '/' || linkHref === 'index.html' || linkHref === '../index.html';
+      const isAtHome = (currentPath === 'index.html' || currentPath === '' || window.location.pathname === '/' || window.location.pathname === '');
+      const isCurrentPage = (isHomeLink && isAtHome) ||
+                            (!isHomeLink && linkPath === currentPath) || 
                             (isServiceSubpage && linkPath === 'layanan.html') ||
                             (isPortfolioSubpage && linkPath === 'portofolio.html') ||
                             (isBlogSubpage && linkPath === 'blog.html');
