@@ -1,0 +1,78 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+.skills {
+  .intro {
+    h3 {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      span {
+        padding: 8px 16px;
+        border-radius: 24px;
+        background: var(--surface-color);
+        border: 1px solid color-mix(in srgb, var(--default-color) 10%, transparent);
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--heading-color);
+      }
+    }
+  }
+
+  .skills-animation {
+    .progress {
+      display: block;
+      height: auto;
+      background: none;
+      border-radius: 0;
+      margin-bottom: 24px;
+      overflow: visible;
+
+      .skill {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        color: var(--heading-color);
+        font-weight: 600;
+        font-size: 16px;
+
+        .val {
+          font-style: normal;
+          color: var(--accent-color);
+          font-size: 14px;
+        }
+      }
+
+      .bar {
+        width: 100%;
+        height: 8px;
+        border-radius: 8px;
+        background: color-mix(in srgb, var(--default-color) 12%, transparent);
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        width: 0;
+        height: 100%;
+        border-radius: 8px;
+        background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 65%, #f06cae));
+        transition: width 1.2s ease-in-out;
+      }
+    }
+  }
+}

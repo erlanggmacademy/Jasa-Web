@@ -1,0 +1,83 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services {
+  .service-rows {
+    .row-item {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 32px 8px;
+      border-top: 1px solid color-mix(in srgb, var(--default-color) 12%, transparent);
+      transition: all 0.3s ease;
+
+      &:last-child {
+        border-bottom: 1px solid color-mix(in srgb, var(--default-color) 12%, transparent);
+      }
+
+      .n {
+        font-size: 28px;
+        font-weight: 700;
+        font-family: var(--heading-font);
+        color: color-mix(in srgb, var(--accent-color) 40%, transparent);
+        min-width: 56px;
+        transition: color 0.3s ease;
+      }
+
+      .body {
+        flex: 1;
+
+        h3 {
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 4px;
+          transition: color 0.3s ease;
+        }
+
+        p {
+          font-size: 16px;
+          margin: 0;
+        }
+      }
+
+      >i {
+        font-size: 24px;
+        color: var(--default-color);
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        padding-left: 24px;
+
+        .n {
+          color: var(--accent-color);
+        }
+
+        .body h3 {
+          color: var(--accent-color);
+        }
+
+        >i {
+          color: var(--accent-color);
+          transform: translate(4px, -4px);
+        }
+      }
+    }
+  }
+
+  @media(max-width:576px) {
+    .service-rows .row-item {
+      gap: 16px;
+
+      .n {
+        font-size: 22px;
+        min-width: 40px;
+      }
+
+      .body h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}

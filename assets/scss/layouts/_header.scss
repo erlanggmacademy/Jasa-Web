@@ -1,0 +1,80 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--background-color) 82%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color) 8%, transparent);
+  padding: 14px 0;
+  transition: all 0.4s ease;
+  z-index: 997;
+
+  .logo {
+    line-height: 1;
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 65%, #f06cae));
+      color: var(--contrast-color);
+      font-family: var(--heading-font);
+      font-weight: 700;
+      font-size: 22px;
+      box-shadow: 0 6px 16px color-mix(in srgb, var(--accent-color) 35%, transparent);
+    }
+
+    img {
+      max-height: 32px;
+      margin-right: 8px;
+    }
+
+    h1.sitename {
+      font-size: 24px;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--heading-color);
+    }
+  }
+
+  .cta-btn {
+    align-items: center;
+    gap: 8px;
+    padding: 11px 24px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 70%, #f06cae));
+    color: var(--contrast-color);
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+    box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color) 30%, transparent);
+    transition: all 0.3s ease;
+
+    i {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px color-mix(in srgb, var(--accent-color) 40%, transparent);
+      color: var(--contrast-color);
+
+      i {
+        transform: translate(2px, -2px);
+      }
+    }
+  }
+
+  .scrolled & {
+    background-color: var(--surface-color);
+    border-bottom-color: transparent;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    padding: 9px 0;
+  }
+}

@@ -1,0 +1,31 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Clients Section
+--------------------------------------------------------------*/
+.clients {
+  padding: 48px 0;
+
+  .eyebrow {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--default-color) 70%, transparent);
+    margin-bottom: 32px;
+  }
+
+  .logos img {
+    max-height: 40px;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+    filter: brightness(0) invert(1);
+    opacity: 0.45;
+    transition: all 0.3s ease;
+  }
+
+  .logos>div:hover img {
+    opacity: 0.9;
+  }
+}

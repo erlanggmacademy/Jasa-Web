@@ -1,0 +1,114 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Experience Section
+--------------------------------------------------------------*/
+.experience {
+  .col-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+
+    i {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--accent-color) 12%, transparent);
+      color: var(--accent-color);
+      font-size: 22px;
+    }
+
+    h3 {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: color-mix(in srgb, var(--default-color) 12%, transparent);
+    }
+  }
+
+  .item {
+    position: relative;
+    padding-bottom: 32px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -28px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent-color);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color) 18%, transparent);
+    }
+
+    .year {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent-color);
+      margin-bottom: 6px;
+    }
+
+    h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .org {
+      display: block;
+      font-size: 14px;
+      color: color-mix(in srgb, var(--default-color) 75%, transparent);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+
+  .btn-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 30px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 70%, #f06cae));
+    color: var(--contrast-color);
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color) 30%, transparent);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px color-mix(in srgb, var(--accent-color) 40%, transparent);
+      color: var(--contrast-color);
+    }
+  }
+}

@@ -1,0 +1,67 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+.testimonials {
+  .q-card {
+    height: 100%;
+    margin: 0;
+    padding: 32px;
+    border-radius: 20px;
+    background: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color) 8%, transparent);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    .rating {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 18px;
+
+      i {
+        color: #f6b73c;
+        font-size: 16px;
+      }
+    }
+
+    blockquote {
+      margin: 0 0 24px;
+      padding: 0;
+      border: none;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--default-color);
+    }
+
+    figcaption {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+
+      img {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .name {
+        display: block;
+        font-weight: 600;
+        color: var(--heading-color);
+        font-size: 15px;
+      }
+
+      .role {
+        display: block;
+        font-size: 13px;
+        color: color-mix(in srgb, var(--default-color) 75%, transparent);
+      }
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
+    }
+  }
+}

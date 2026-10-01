@@ -1,0 +1,72 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Process Section
+--------------------------------------------------------------*/
+.process {
+  .steps {
+    position: relative;
+  }
+
+  .step {
+    position: relative;
+    height: 100%;
+    padding: 36px 28px;
+    border-radius: 18px;
+    background: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color) 8%, transparent);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    .num {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      font-size: 38px;
+      font-weight: 700;
+      font-family: var(--heading-font);
+      color: color-mix(in srgb, var(--accent-color) 12%, transparent);
+      line-height: 1;
+    }
+
+    i {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      background: color-mix(in srgb, var(--accent-color) 12%, transparent);
+      color: var(--accent-color);
+      font-size: 26px;
+      transition: all 0.3s ease;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+      border-color: color-mix(in srgb, var(--accent-color) 30%, transparent);
+
+      i {
+        background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 70%, #f06cae));
+        color: var(--contrast-color);
+      }
+
+      .num {
+        color: color-mix(in srgb, var(--accent-color) 22%, transparent);
+      }
+    }
+  }
+}

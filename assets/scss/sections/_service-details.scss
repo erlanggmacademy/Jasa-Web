@@ -1,0 +1,211 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Service Details Section
+--------------------------------------------------------------*/
+.service-details {
+  .sidebar {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .services-list {
+      padding: 28px;
+      border-radius: 18px;
+      background: var(--surface-color);
+      border: 1px solid color-mix(in srgb, var(--default-color) 8%, transparent);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        margin-bottom: 8px;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 14px 16px;
+          border-radius: 12px;
+          color: var(--default-color);
+          font-weight: 500;
+          font-size: 15px;
+          transition: all 0.3s ease;
+
+          i {
+            font-size: 14px;
+            opacity: 0.6;
+            transition: transform 0.3s ease;
+          }
+
+          &:hover {
+            background: color-mix(in srgb, var(--accent-color) 8%, transparent);
+            color: var(--accent-color);
+
+            i {
+              transform: translateX(3px);
+            }
+          }
+        }
+
+        &.active a {
+          background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 70%, #f06cae));
+          color: var(--contrast-color);
+
+          i {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .help-card {
+      padding: 28px;
+      border-radius: 18px;
+      background: color-mix(in srgb, var(--accent-color) 8%, transparent);
+      text-align: center;
+
+      i {
+        font-size: 32px;
+        color: var(--accent-color);
+      }
+
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 12px 0 8px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .detail {
+    .hero-img {
+      width: 100%;
+      border-radius: 18px;
+      margin-bottom: 28px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 36px 0 16px;
+    }
+
+    .lead {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--heading-color);
+      margin-bottom: 18px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .includes {
+      .inc {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 18px;
+        border-radius: 12px;
+        background: var(--surface-color);
+        border: 1px solid color-mix(in srgb, var(--default-color) 8%, transparent);
+        font-weight: 500;
+        font-size: 15px;
+
+        i {
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .step {
+        display: flex;
+        gap: 20px;
+        padding: 24px;
+        border-radius: 16px;
+        background: var(--surface-color);
+        border: 1px solid color-mix(in srgb, var(--default-color) 8%, transparent);
+
+        .n {
+          font-size: 28px;
+          font-weight: 700;
+          font-family: var(--heading-font);
+          color: color-mix(in srgb, var(--accent-color) 45%, transparent);
+          line-height: 1;
+        }
+
+        h4 {
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 6px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 1.6;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .btn-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 70%, #f06cae));
+    color: var(--contrast-color);
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color) 30%, transparent);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px color-mix(in srgb, var(--accent-color) 40%, transparent);
+      color: var(--contrast-color);
+    }
+  }
+
+  @media (max-width: 992px) {
+    .sidebar {
+      position: static;
+    }
+  }
+}
