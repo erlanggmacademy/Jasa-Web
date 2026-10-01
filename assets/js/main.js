@@ -251,4 +251,16 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Table of Contents Toggle Text (Buka / Tutup)
+   */
+  document.querySelectorAll('.article-toc-box').forEach(toc => {
+    const toggleText = toc.querySelector('.toc-toggle-text');
+    if (toggleText) {
+      toc.addEventListener('toggle', () => {
+        toggleText.textContent = toc.open ? 'Tutup' : 'Buka';
+      });
+    }
+  });
+
 })();

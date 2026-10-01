@@ -1047,6 +1047,35 @@ section,
   }
 }
 
+/* Hero Showcase Mockup */
+.hero-showcase {
+  margin-top: 50px;
+  position: relative;
+}
+
+.hero-showcase-inner {
+  position: relative;
+  display: inline-block;
+  max-width: 980px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.28), rgba(7, 13, 25, 0.9) 70%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 50px -10px rgba(37, 99, 235, 0.3);
+  backdrop-filter: blur(12px);
+}
+
+.hero-showcase-inner img {
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+}
+
+.hero-showcase-inner:hover img {
+  transform: scale(1.015);
+}
+
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
@@ -3380,6 +3409,139 @@ section,
     position: static;
     margin-top: 30px;
   }
+}
+
+/* Table of Contents (Daftar Isi Artikel - Collapsible) */
+.article-toc-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 14px;
+  padding: 16px 22px;
+  margin: 20px 0 28px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.article-toc-box summary.toc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: padding 0.2s ease;
+}
+
+.article-toc-box summary.toc-header::-webkit-details-marker {
+  display: none;
+}
+
+.article-toc-box summary.toc-header::marker {
+  display: none;
+}
+
+.article-toc-box .toc-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.article-toc-box .toc-title i {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+.article-toc-box .toc-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  background: rgba(13, 110, 253, 0.12);
+  color: var(--accent-color);
+  border-radius: 20px;
+  border: 1px solid rgba(13, 110, 253, 0.25);
+  transition: all 0.2s ease;
+}
+
+.article-toc-box .toc-toggle-btn:hover {
+  background: rgba(13, 110, 253, 0.25);
+  border-color: var(--accent-color);
+}
+
+.article-toc-box .toc-chevron {
+  transition: transform 0.3s ease;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+/* When open vs closed state */
+.article-toc-box[open] summary.toc-header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 14px;
+}
+
+.article-toc-box[open] .toc-chevron {
+  transform: rotate(180deg);
+}
+
+.article-toc-box .toc-body {
+  animation: fadeInTOC 0.25s ease;
+}
+
+@keyframes fadeInTOC {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.article-toc-box .toc-list {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.article-toc-box .toc-list li {
+  margin-bottom: 9px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.article-toc-box .toc-list li:last-child {
+  margin-bottom: 0;
+}
+
+.article-toc-box .toc-list a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.article-toc-box .toc-list a:hover {
+  color: var(--accent-color);
+  transform: translateX(4px);
+  text-decoration: underline;
+}
+
+.blog-details-article h2,
+.blog-details-article h3 {
+  scroll-margin-top: 100px;
 }
 
 /* Article Summary Box (Ringkasan Artikel) */
