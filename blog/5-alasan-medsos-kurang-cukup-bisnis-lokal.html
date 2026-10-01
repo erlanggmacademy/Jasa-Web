@@ -44,11 +44,84 @@
   <!-- Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- Structured Data (JSON-LD) with Full Organization, LocalBusiness, BreadcrumbList, Article, and BlogPosting Schemas -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://optisitus.web.id/#organization",
+        "name": "OptiSitus",
+        "url": "https://optisitus.web.id/",
+        "logo": "https://optisitus.web.id/assets/img/logo-header.webp",
+        "image": "https://optisitus.web.id/assets/img/logo-header.webp",
+        "telephone": "+6281907019403",
+        "email": "kontak@optisitus.web.id",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Ahmad Yani No. 88",
+          "addressLocality": "Banyuwangi",
+          "addressRegion": "Jawa Timur",
+          "postalCode": "68411",
+          "addressCountry": "ID"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+6281907019403",
+          "availableLanguage": "Indonesian"
+        },
+        "sameAs": [
+          "https://optisitus.web.id/"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://optisitus.web.id/#localbusiness",
+        "name": "OptiSitus - Jasa Pembuatan Website Banyuwangi",
+        "image": "https://optisitus.web.id/assets/img/logo-header.webp",
+        "url": "https://optisitus.web.id/",
+        "telephone": "+6281907019403",
+        "email": "kontak@optisitus.web.id",
+        "priceRange": "Rp 850.000 - Rp 3.250.000",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Ahmad Yani No. 88",
+          "addressLocality": "Banyuwangi",
+          "addressRegion": "Jawa Timur",
+          "postalCode": "68411",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -8.219233,
+          "longitude": 114.369226
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "21:00"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Banyuwangi"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Jawa Timur"
+          }
+        ]
+      },
       {
         "@type": "BreadcrumbList",
         "@id": "https://optisitus.web.id/blog/5-alasan-medsos-kurang-cukup-bisnis-lokal.html#breadcrumb",
@@ -74,22 +147,37 @@
         ]
       },
       {
-        "@type": "BlogPosting",
+        "@type": "Article",
         "@id": "https://optisitus.web.id/blog/5-alasan-medsos-kurang-cukup-bisnis-lokal.html#article",
         "headline": "5 Alasan Mengapa Medsos Saja Kurang Cukup untuk Bisnis Lokal di Banyuwangi",
         "description": "Banyak pelaku usaha di Banyuwangi hanya mengandalkan medsos. Simak 5 alasan mengapa website resmi tetap wajib dimiliki agar usaha terus berkembang di Google.",
+        "abstract": "Media sosial efektif untuk membangun awareness kilat, namun website mandiri mutlak dibutuhkan untuk menjaring pembeli berintensi tinggi dari Google Search & Maps, membangun kredibilitas legalitas, mengamankan data kepemilikan aset digital, dan mempermudah pesanan WhatsApp otomatis.",
+        "image": "https://optisitus.web.id/assets/img/logo-header.webp",
         "datePublished": "2026-09-28T08:00:00+07:00",
         "dateModified": "2026-09-28T08:00:00+07:00",
         "author": {
-          "@type": "Organization",
-          "name": "Tim OptiSitus",
-          "url": "https://optisitus.web.id/"
+          "@id": "https://optisitus.web.id/#organization"
         },
         "publisher": {
-          "@type": "Organization",
-          "name": "OptiSitus",
-          "url": "https://optisitus.web.id/",
-          "logo": "https://optisitus.web.id/assets/img/logo-header.webp"
+          "@id": "https://optisitus.web.id/#organization"
+        },
+        "mainEntityOfPage": "https://optisitus.web.id/blog/5-alasan-medsos-kurang-cukup-bisnis-lokal.html",
+        "inLanguage": "id-ID"
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://optisitus.web.id/blog/5-alasan-medsos-kurang-cukup-bisnis-lokal.html#blogposting",
+        "headline": "5 Alasan Mengapa Medsos Saja Kurang Cukup untuk Bisnis Lokal di Banyuwangi",
+        "description": "Banyak pelaku usaha di Banyuwangi hanya mengandalkan medsos. Simak 5 alasan mengapa website resmi tetap wajib dimiliki agar usaha terus berkembang di Google.",
+        "abstract": "Media sosial efektif untuk membangun awareness kilat, namun website mandiri mutlak dibutuhkan untuk menjaring pembeli berintensi tinggi dari Google Search & Maps, membangun kredibilitas legalitas, mengamankan data kepemilikan aset digital, dan mempermudah pesanan WhatsApp otomatis.",
+        "image": "https://optisitus.web.id/assets/img/logo-header.webp",
+        "datePublished": "2026-09-28T08:00:00+07:00",
+        "dateModified": "2026-09-28T08:00:00+07:00",
+        "author": {
+          "@id": "https://optisitus.web.id/#organization"
+        },
+        "publisher": {
+          "@id": "https://optisitus.web.id/#organization"
         },
         "mainEntityOfPage": "https://optisitus.web.id/blog/5-alasan-medsos-kurang-cukup-bisnis-lokal.html",
         "inLanguage": "id-ID"
@@ -190,6 +278,15 @@
                 <p class="lead text-white fw-medium">
                   Banyak pemilik kedai kopi, toko pakaian, dan pengrajin di Banyuwangi menganggap: <em>"Usaha saya sudah punya Instagram dan TikTok, buat apa keluar uang untuk bikin website lagi?"</em>
                 </p>
+
+                <!-- Article Summary Box (Ringkasan Artikel) -->
+                <div class="article-summary-box">
+                  <div class="summary-header">
+                    <i class="bi bi-card-checklist text-primary"></i>
+                    <span class="summary-title">Ringkasan Artikel:</span>
+                  </div>
+                  <p class="summary-text">Media sosial efektif untuk membangun awareness kilat, namun website mandiri mutlak dibutuhkan untuk menjaring pembeli berintensi tinggi dari Google Search &amp; Maps, membangun kredibilitas legalitas, mengamankan data kepemilikan aset digital, dan mempermudah pesanan WhatsApp otomatis.</p>
+                </div>
 
                 <p>
                   Memang benar bahwa media sosial adalah alat yang sangat efektif untuk membangun kesadaran merek (brand awareness) dan membagikan video pendek. Namun, mengandalkan 100% operasional bisnis hanya pada platform media sosial menyimpan risiko tersembunyi yang sering kali baru disadari saat omset penjualan mulai menurun. Berikut adalah 5 alasan mendasar mengapa bisnis lokal Anda tetap wajib memiliki website mandiri:
@@ -324,7 +421,7 @@
                 </div>
               </div>
 
-              <!-- 3. Widget CTA WhatsApp -->
+              <!-- Widget CTA WhatsApp -->
               <div class="sidebar-cta-card mb-4">
                 <i class="bi bi-whatsapp wa-icon-large"></i>
                 <h4>Butuh Konsultasi Website?</h4>

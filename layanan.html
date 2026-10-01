@@ -49,62 +49,135 @@
 
   <!-- Structured Data (JSON-LD) for Service & Breadcrumbs -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://optisitus.web.id/layanan.html#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Beranda",
-            "item": "https://optisitus.web.id/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Layanan",
-            "item": "https://optisitus.web.id/layanan.html"
-          }
-        ]
-      },
-      {
-        "@type": "Service",
-        "@id": "https://optisitus.web.id/layanan.html#service",
-        "name": "Jasa Pembuatan Website Banyuwangi",
-        "serviceType": "Web Development & Web Design",
-        "description": "Layanan pembuatan website profesional untuk UMKM, company profile, homestay & wisata, landing page promosi, serta redesign SEO di Banyuwangi.",
-        "provider": {
-          "@type": "Organization",
-          "@id": "https://optisitus.web.id/#organization",
-          "name": "OptiSitus",
-          "url": "https://optisitus.web.id/",
-          "logo": "https://optisitus.web.id/assets/img/logo-header.webp",
-          "image": "https://optisitus.web.id/assets/img/logo-header.webp",
-          "telephone": "+6281907019403",
-          "email": "kontak@optisitus.web.id",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Jl. Ahmad Yani No. 88",
-            "addressLocality": "Banyuwangi",
-            "addressRegion": "Jawa Timur",
-            "postalCode": "68411",
-            "addressCountry": "ID"
-          },
-          "areaServed": {
-            "@type": "AdministrativeArea",
-            "name": "Banyuwangi, Jawa Timur"
-          }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://optisitus.web.id/layanan.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://optisitus.web.id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Layanan",
+          "item": "https://optisitus.web.id/layanan.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://optisitus.web.id/layanan.html#service",
+      "name": "Jasa Pembuatan Website Banyuwangi",
+      "serviceType": "Web Development & Web Design",
+      "description": "Layanan pembuatan website profesional untuk UMKM, company profile, homestay & wisata, landing page promosi, serta redesign SEO di Banyuwangi.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://optisitus.web.id/#organization",
+        "name": "OptiSitus",
+        "url": "https://optisitus.web.id/",
+        "logo": "https://optisitus.web.id/assets/img/logo-header.webp",
+        "image": "https://optisitus.web.id/assets/img/logo-header.webp",
+        "telephone": "+6281907019403",
+        "email": "kontak@optisitus.web.id",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Ahmad Yani No. 88",
+          "addressLocality": "Banyuwangi",
+          "addressRegion": "Jawa Timur",
+          "postalCode": "68411",
+          "addressCountry": "ID"
         },
         "areaServed": {
           "@type": "AdministrativeArea",
           "name": "Banyuwangi, Jawa Timur"
         }
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Banyuwangi, Jawa Timur"
       }
-    ]
-  }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://optisitus.web.id/#organization",
+      "name": "OptiSitus",
+      "url": "https://optisitus.web.id/",
+      "logo": "https://optisitus.web.id/assets/img/logo-header.webp",
+      "image": "https://optisitus.web.id/assets/img/logo-header.webp",
+      "telephone": "+6281907019403",
+      "email": "kontak@optisitus.web.id",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Ahmad Yani No. 88",
+        "addressLocality": "Banyuwangi",
+        "addressRegion": "Jawa Timur",
+        "postalCode": "68411",
+        "addressCountry": "ID"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+6281907019403",
+        "availableLanguage": "Indonesian"
+      },
+      "sameAs": [
+        "https://optisitus.web.id/"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://optisitus.web.id/#localbusiness",
+      "name": "OptiSitus - Jasa Pembuatan Website Banyuwangi",
+      "image": "https://optisitus.web.id/assets/img/logo-header.webp",
+      "url": "https://optisitus.web.id/",
+      "telephone": "+6281907019403",
+      "email": "kontak@optisitus.web.id",
+      "priceRange": "Rp 850.000 - Rp 3.250.000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Ahmad Yani No. 88",
+        "addressLocality": "Banyuwangi",
+        "addressRegion": "Jawa Timur",
+        "postalCode": "68411",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -8.219233,
+        "longitude": 114.369226
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "21:00"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Banyuwangi"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Jawa Timur"
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 

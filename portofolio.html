@@ -49,43 +49,116 @@
 
   <!-- Structured Data (JSON-LD) for BreadcrumbList & CollectionPage -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://optisitus.web.id/portofolio.html#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Beranda",
-            "item": "https://optisitus.web.id/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Portofolio Website",
-            "item": "https://optisitus.web.id/portofolio.html"
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://optisitus.web.id/portofolio.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://optisitus.web.id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portofolio Website",
+          "item": "https://optisitus.web.id/portofolio.html"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://optisitus.web.id/portofolio.html#webpage",
+      "url": "https://optisitus.web.id/portofolio.html",
+      "name": "Portofolio Website & Studi Kasus | OptiSitus Banyuwangi",
+      "description": "Contoh website yang dikerjakan OptiSitus beserta masalah, solusi, dan fitur di tiap proyek. Transparan dengan label status proyek nyata.",
+      "isPartOf": {
+        "@id": "https://optisitus.web.id/#website"
       },
-      {
-        "@type": "CollectionPage",
-        "@id": "https://optisitus.web.id/portofolio.html#webpage",
-        "url": "https://optisitus.web.id/portofolio.html",
-        "name": "Portofolio Website & Studi Kasus | OptiSitus Banyuwangi",
-        "description": "Contoh website yang dikerjakan OptiSitus beserta masalah, solusi, dan fitur di tiap proyek. Transparan dengan label status proyek nyata.",
-        "isPartOf": {
-          "@id": "https://optisitus.web.id/#website"
+      "publisher": {
+        "@id": "https://optisitus.web.id/#organization"
+      },
+      "inLanguage": "id-ID"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://optisitus.web.id/#organization",
+      "name": "OptiSitus",
+      "url": "https://optisitus.web.id/",
+      "logo": "https://optisitus.web.id/assets/img/logo-header.webp",
+      "image": "https://optisitus.web.id/assets/img/logo-header.webp",
+      "telephone": "+6281907019403",
+      "email": "kontak@optisitus.web.id",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Ahmad Yani No. 88",
+        "addressLocality": "Banyuwangi",
+        "addressRegion": "Jawa Timur",
+        "postalCode": "68411",
+        "addressCountry": "ID"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+6281907019403",
+        "availableLanguage": "Indonesian"
+      },
+      "sameAs": [
+        "https://optisitus.web.id/"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://optisitus.web.id/#localbusiness",
+      "name": "OptiSitus - Jasa Pembuatan Website Banyuwangi",
+      "image": "https://optisitus.web.id/assets/img/logo-header.webp",
+      "url": "https://optisitus.web.id/",
+      "telephone": "+6281907019403",
+      "email": "kontak@optisitus.web.id",
+      "priceRange": "Rp 850.000 - Rp 3.250.000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Ahmad Yani No. 88",
+        "addressLocality": "Banyuwangi",
+        "addressRegion": "Jawa Timur",
+        "postalCode": "68411",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -8.219233,
+        "longitude": 114.369226
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "21:00"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Banyuwangi"
         },
-        "publisher": {
-          "@id": "https://optisitus.web.id/#organization"
-        },
-        "inLanguage": "id-ID"
-      }
-    ]
-  }
+        {
+          "@type": "AdministrativeArea",
+          "name": "Jawa Timur"
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 

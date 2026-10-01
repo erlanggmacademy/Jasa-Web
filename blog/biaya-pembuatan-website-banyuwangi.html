@@ -44,11 +44,84 @@
   <!-- Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- Structured Data (JSON-LD) with Full Organization, LocalBusiness, BreadcrumbList, Article, and BlogPosting Schemas -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://optisitus.web.id/#organization",
+        "name": "OptiSitus",
+        "url": "https://optisitus.web.id/",
+        "logo": "https://optisitus.web.id/assets/img/logo-header.webp",
+        "image": "https://optisitus.web.id/assets/img/logo-header.webp",
+        "telephone": "+6281907019403",
+        "email": "kontak@optisitus.web.id",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Ahmad Yani No. 88",
+          "addressLocality": "Banyuwangi",
+          "addressRegion": "Jawa Timur",
+          "postalCode": "68411",
+          "addressCountry": "ID"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+6281907019403",
+          "availableLanguage": "Indonesian"
+        },
+        "sameAs": [
+          "https://optisitus.web.id/"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://optisitus.web.id/#localbusiness",
+        "name": "OptiSitus - Jasa Pembuatan Website Banyuwangi",
+        "image": "https://optisitus.web.id/assets/img/logo-header.webp",
+        "url": "https://optisitus.web.id/",
+        "telephone": "+6281907019403",
+        "email": "kontak@optisitus.web.id",
+        "priceRange": "Rp 850.000 - Rp 3.250.000",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Ahmad Yani No. 88",
+          "addressLocality": "Banyuwangi",
+          "addressRegion": "Jawa Timur",
+          "postalCode": "68411",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -8.219233,
+          "longitude": 114.369226
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "21:00"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Banyuwangi"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Jawa Timur"
+          }
+        ]
+      },
       {
         "@type": "BreadcrumbList",
         "@id": "https://optisitus.web.id/blog/biaya-pembuatan-website-banyuwangi.html#breadcrumb",
@@ -74,22 +147,37 @@
         ]
       },
       {
-        "@type": "BlogPosting",
+        "@type": "Article",
         "@id": "https://optisitus.web.id/blog/biaya-pembuatan-website-banyuwangi.html#article",
         "headline": "Berapa Biaya Pembuatan Website di Banyuwangi? Rincian Lengkap 2026",
         "description": "Bongkar tuntas rincian biaya pembuatan website di Banyuwangi 2026. Mulai paket Starter UMKM Rp 850 ribuan hingga Company Profile tanpa biaya tersembunyi.",
+        "abstract": "Biaya pembuatan website di Banyuwangi berkisar antara Rp 850.000 untuk Paket Starter UMKM hingga Rp 1.750.000 untuk Company Profile dan Wisata, mencakup domain resmi, sewa hosting cloud 1 tahun, sertifikat SSL, dan optimasi SEO Google Maps tanpa biaya tersembunyi.",
+        "image": "https://optisitus.web.id/assets/img/logo-header.webp",
         "datePublished": "2026-10-01T08:00:00+07:00",
         "dateModified": "2026-10-01T08:00:00+07:00",
         "author": {
-          "@type": "Organization",
-          "name": "Tim OptiSitus",
-          "url": "https://optisitus.web.id/"
+          "@id": "https://optisitus.web.id/#organization"
         },
         "publisher": {
-          "@type": "Organization",
-          "name": "OptiSitus",
-          "url": "https://optisitus.web.id/",
-          "logo": "https://optisitus.web.id/assets/img/logo-header.webp"
+          "@id": "https://optisitus.web.id/#organization"
+        },
+        "mainEntityOfPage": "https://optisitus.web.id/blog/biaya-pembuatan-website-banyuwangi.html",
+        "inLanguage": "id-ID"
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://optisitus.web.id/blog/biaya-pembuatan-website-banyuwangi.html#blogposting",
+        "headline": "Berapa Biaya Pembuatan Website di Banyuwangi? Rincian Lengkap 2026",
+        "description": "Bongkar tuntas rincian biaya pembuatan website di Banyuwangi 2026. Mulai paket Starter UMKM Rp 850 ribuan hingga Company Profile tanpa biaya tersembunyi.",
+        "abstract": "Biaya pembuatan website di Banyuwangi berkisar antara Rp 850.000 untuk Paket Starter UMKM hingga Rp 1.750.000 untuk Company Profile dan Wisata, mencakup domain resmi, sewa hosting cloud 1 tahun, sertifikat SSL, dan optimasi SEO Google Maps tanpa biaya tersembunyi.",
+        "image": "https://optisitus.web.id/assets/img/logo-header.webp",
+        "datePublished": "2026-10-01T08:00:00+07:00",
+        "dateModified": "2026-10-01T08:00:00+07:00",
+        "author": {
+          "@id": "https://optisitus.web.id/#organization"
+        },
+        "publisher": {
+          "@id": "https://optisitus.web.id/#organization"
         },
         "mainEntityOfPage": "https://optisitus.web.id/blog/biaya-pembuatan-website-banyuwangi.html",
         "inLanguage": "id-ID"
@@ -190,6 +278,15 @@
                 <p class="lead text-white fw-medium">
                   Pertanyaan yang paling sering diajukan oleh pemilik bisnis, pengelola homestay, dan pelaku UMKM di Banyuwangi saat pertama kali ingin go-digital adalah: <em>"Berapa sebenarnya biaya bikin website yang bagus, cepat, dan tidak kemahalan?"</em>
                 </p>
+
+                <!-- Article Summary Box (Ringkasan Artikel) -->
+                <div class="article-summary-box">
+                  <div class="summary-header">
+                    <i class="bi bi-card-checklist text-primary"></i>
+                    <span class="summary-title">Ringkasan Artikel:</span>
+                  </div>
+                  <p class="summary-text">Biaya pembuatan website di Banyuwangi berkisar antara <strong>Rp 850.000</strong> untuk Paket Starter UMKM hingga <strong>Rp 1.750.000</strong> untuk Company Profile dan Wisata, mencakup domain resmi, sewa hosting cloud 1 tahun, sertifikat SSL, dan optimasi SEO Google Maps tanpa biaya tersembunyi.</p>
+                </div>
 
                 <p>
                   Jika Anda mencari di internet, variasi harganya bisa sangat membingungkan: ada penawaran website murah seharga Rp 200.000-an, hingga agensi besar yang mematok tarif puluhan juta rupiah. Mengapa selisihnya bisa sejauh itu? Apa saja yang sebenarnya Anda bayar, dan paket mana yang paling tepat untuk skala bisnis Anda di Banyuwangi? Mari kita bedah secara transparan.
@@ -389,7 +486,7 @@
                 </div>
               </div>
 
-              <!-- 3. Widget CTA WhatsApp -->
+              <!-- Widget CTA WhatsApp -->
               <div class="sidebar-cta-card mb-4">
                 <i class="bi bi-whatsapp wa-icon-large"></i>
                 <h4>Butuh Konsultasi Website?</h4>

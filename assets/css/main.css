@@ -3382,6 +3382,32 @@ section,
   }
 }
 
+/* Article Summary Box (Ringkasan Artikel) */
+.article-summary-box {
+  background: rgba(13, 110, 253, 0.08);
+  border: 1px solid rgba(13, 110, 253, 0.25);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin: 24px 0 28px;
+}
+
+.article-summary-box .summary-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: var(--accent-color);
+  font-size: 15px;
+}
+
+.article-summary-box .summary-text {
+  font-size: 14.5px;
+  color: #e2e8f0;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
 /* Baca Juga Box inside Article */
 .baca-juga-box {
   background: rgba(13, 110, 253, 0.08);

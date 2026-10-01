@@ -49,50 +49,96 @@
 
   <!-- Structured Data (JSON-LD) for Organization & WebSite -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://optisitus.web.id/#organization",
-        "name": "OptiSitus",
-        "url": "https://optisitus.web.id/",
-        "logo": "https://optisitus.web.id/assets/img/logo-header.webp",
-        "image": "https://optisitus.web.id/assets/img/logo-header.webp",
-        "telephone": "+6281907019403",
-        "email": "kontak@optisitus.web.id",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Jl. Ahmad Yani No. 88",
-          "addressLocality": "Banyuwangi",
-          "addressRegion": "Jawa Timur",
-          "postalCode": "68411",
-          "addressCountry": "ID"
-        },
-        "areaServed": {
-          "@type": "AdministrativeArea",
-          "name": "Banyuwangi, Jawa Timur"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer service",
-          "telephone": "+6281907019403",
-          "availableLanguage": "Indonesian"
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://optisitus.web.id/#organization",
+      "name": "OptiSitus",
+      "url": "https://optisitus.web.id/",
+      "logo": "https://optisitus.web.id/assets/img/logo-header.webp",
+      "image": "https://optisitus.web.id/assets/img/logo-header.webp",
+      "telephone": "+6281907019403",
+      "email": "kontak@optisitus.web.id",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Ahmad Yani No. 88",
+        "addressLocality": "Banyuwangi",
+        "addressRegion": "Jawa Timur",
+        "postalCode": "68411",
+        "addressCountry": "ID"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://optisitus.web.id/#website",
-        "url": "https://optisitus.web.id/",
-        "name": "OptiSitus",
-        "description": "Jasa Pembuatan Website Profesional di Banyuwangi untuk UMKM dan Bisnis",
-        "publisher": {
-          "@id": "https://optisitus.web.id/#organization"
-        },
-        "inLanguage": "id-ID"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Banyuwangi, Jawa Timur"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+6281907019403",
+        "availableLanguage": "Indonesian"
       }
-    ]
-  }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://optisitus.web.id/#website",
+      "url": "https://optisitus.web.id/",
+      "name": "OptiSitus",
+      "description": "Jasa Pembuatan Website Profesional di Banyuwangi untuk UMKM dan Bisnis",
+      "publisher": {
+        "@id": "https://optisitus.web.id/#organization"
+      },
+      "inLanguage": "id-ID"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://optisitus.web.id/#localbusiness",
+      "name": "OptiSitus - Jasa Pembuatan Website Banyuwangi",
+      "image": "https://optisitus.web.id/assets/img/logo-header.webp",
+      "url": "https://optisitus.web.id/",
+      "telephone": "+6281907019403",
+      "email": "kontak@optisitus.web.id",
+      "priceRange": "Rp 850.000 - Rp 3.250.000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Ahmad Yani No. 88",
+        "addressLocality": "Banyuwangi",
+        "addressRegion": "Jawa Timur",
+        "postalCode": "68411",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -8.219233,
+        "longitude": 114.369226
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "21:00"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Banyuwangi"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Jawa Timur"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <!-- =======================================================
