@@ -31,21 +31,31 @@
   <link href="assets/img/favicon.webp" rel="icon" type="image/webp">
   <link href="assets/img/apple-touch-icon.webp" rel="apple-touch-icon" type="image/webp">
 
-  <!-- Fonts -->
+  <!-- Preload Critical Above-The-Fold Assets -->
+  <link rel="preload" as="image" href="assets/img/hero-showcase-website-banyuwangi-sm.webp" media="(max-width: 768px)" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/hero-showcase-website-banyuwangi.webp" media="(min-width: 769px)" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/logo-header.webp" type="image/webp">
+  <link rel="preload" as="style" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="preload" as="style" href="assets/css/main.min.css">
+
+  <!-- Google Fonts - Asynchronous Non-Blocking Load -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap">
+  </noscript>
 
-  <!-- Vendor CSS Files -->
+  <!-- Core CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Deferred Non-Critical CSS Files (Non-Render-Blocking) -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet"></noscript>
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="assets/vendor/aos/aos.css" rel="stylesheet"></noscript>
 
   <!-- Structured Data (JSON-LD) for Organization & WebSite -->
   <script type="application/ld+json">
@@ -236,7 +246,7 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="galeri.html">Galeri</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Buka Menu Navigasi"></i>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="Buka Menu Navigasi"></i>
       </nav>
 
       <a class="cta-btn d-none d-xl-inline-flex"
@@ -256,7 +266,7 @@
       <div class="container">
 
         <div class="row justify-content-center text-center">
-          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-10">
             <div class="avatar">
               <img src="assets/img/favicon.webp" alt="OptiSitus Icon" class="img-fluid" width="110" height="110">
             </div>
@@ -279,7 +289,7 @@
             </div>
 
             <!-- Trust Badges -->
-            <div class="hero-badges" data-aos="fade-up" data-aos-delay="200">
+            <div class="hero-badges">
               <span class="hero-badge-item"><i class="bi bi-lightning-charge-fill"></i> Loading Cepat
                 (Mobile-First)</span>
               <span class="hero-badge-item"><i class="bi bi-google"></i> Optimasi SEO Lokal Google</span>
@@ -288,9 +298,13 @@
             </div>
 
             <!-- Hero Showcase Mockup -->
-            <div class="hero-showcase" data-aos="zoom-in" data-aos-delay="250">
+            <div class="hero-showcase">
               <div class="hero-showcase-inner">
-                <img src="assets/img/hero-showcase-website-banyuwangi.webp" alt="Mockup Desain Website Modern Banyuwangi di Laptop dan Smartphone karya OptiSitus" class="img-fluid w-100" width="1280" height="720" loading="eager">
+                <img src="assets/img/hero-showcase-website-banyuwangi.webp"
+                     srcset="assets/img/hero-showcase-website-banyuwangi-sm.webp 720w, assets/img/hero-showcase-website-banyuwangi.webp 1200w"
+                     sizes="(max-width: 768px) 100vw, 1200px"
+                     alt="Mockup Desain Website Modern Banyuwangi di Laptop dan Smartphone karya OptiSitus"
+                     class="img-fluid w-100" width="1200" height="670" loading="eager" fetchpriority="high">
               </div>
             </div>
 
@@ -306,7 +320,7 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <p class="eyebrow text-center mb-4">Solusi Digital Siap Pakai untuk Beragam Sektor Usaha di Banyuwangi</p>
+        <h2 class="eyebrow text-center mb-4">Solusi Digital Siap Pakai untuk Beragam Sektor Usaha di Banyuwangi</h2>
 
         <div class="row g-3 justify-content-center">
           <div class="col-lg-2 col-md-4 col-6">
@@ -549,7 +563,8 @@
                 <span class="skill"><span class="name">Optimasi Mobile &amp; Loading Cepat (Core Web Vitals)</span> <i
                     class="val">98%</i></span>
                 <div class="bar">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"
+                    aria-label="Optimasi Mobile dan Loading Cepat 98%">
                   </div>
                 </div>
               </div>
@@ -558,7 +573,8 @@
                 <span class="skill"><span class="name">Kesiapan SEO Lokal (Struktur Headings &amp; Meta)</span> <i
                     class="val">95%</i></span>
                 <div class="bar">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
+                    aria-label="Kesiapan SEO Lokal Struktur Headings dan Meta 95%">
                   </div>
                 </div>
               </div>
@@ -567,7 +583,8 @@
                 <span class="skill"><span class="name">Integrasi Direct WhatsApp &amp; UX Konversi</span> <i
                     class="val">95%</i></span>
                 <div class="bar">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
+                    aria-label="Integrasi Direct WhatsApp dan UX Konversi 95%">
                   </div>
                 </div>
               </div>
@@ -577,7 +594,7 @@
                     class="val">100%</i></span>
                 <div class="bar">
                   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100"></div>
+                    aria-valuemax="100" aria-label="Transparansi Biaya dan Akses Penuh Klien 100%"></div>
                 </div>
               </div>
 
@@ -585,7 +602,8 @@
                 <span class="skill"><span class="name">Dukungan &amp; Panduan Pasca-Peluncuran</span> <i
                     class="val">90%</i></span>
                 <div class="bar">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                    aria-label="Dukungan dan Panduan Pasca-Peluncuran 90%">
                   </div>
                 </div>
               </div>
@@ -815,7 +833,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <figure class="q-card">
               <div class="card-top">
-                <div class="rating" aria-label="Rating 5 dari 5 bintang">
+                <div class="rating" role="img" aria-label="Rating 5 dari 5 bintang">
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
@@ -844,7 +862,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <figure class="q-card">
               <div class="card-top">
-                <div class="rating" aria-label="Rating 5 dari 5 bintang">
+                <div class="rating" role="img" aria-label="Rating 5 dari 5 bintang">
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
@@ -873,7 +891,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <figure class="q-card">
               <div class="card-top">
-                <div class="rating" aria-label="Rating 5 dari 5 bintang">
+                <div class="rating" role="img" aria-label="Rating 5 dari 5 bintang">
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
@@ -1357,7 +1375,7 @@
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Navigasi</h4>
+          <h3>Navigasi</h3>
           <ul>
             <li><a href="/">Beranda</a></li>
             <li><a href="tentang-kami.html">Tentang Kami</a></li>
@@ -1370,7 +1388,7 @@
         </div>
 
         <div class="col-lg-3 col-6 footer-links">
-          <h4>Layanan Kami</h4>
+          <h3>Layanan Kami</h3>
           <ul>
             <li><a href="layanan/website-umkm-banyuwangi.html">Website UMKM Banyuwangi</a></li>
             <li><a href="layanan/website-company-profile.html">Website Company Profile</a></li>
@@ -1382,7 +1400,7 @@
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact">
-          <h4>Hubungi OptiSitus</h4>
+          <h3>Hubungi OptiSitus</h3>
           <p>Jl. Ahmad Yani No. 88, Banyuwangi, Jawa Timur, Indonesia</p>
           <p class="mt-3"><strong>WhatsApp:</strong> <span>081907019403</span></p>
           <p><strong>Email Cadangan:</strong> <span>kontak@optisitus.web.id</span></p>
@@ -1410,18 +1428,13 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"
     aria-label="Kembali ke atas"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Vendor JS Files (Deferred & Optimized) -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/aos/aos.js" defer></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.min.js" defer></script>
 
   <!-- OptiSitus Interaction & GA4 WhatsApp Event Tracking -->
   <script>

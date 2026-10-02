@@ -1,0 +1,89 @@
+# ========================================================
+# robots.txt - OptiSitus (Jasa Pembuatan Website Banyuwangi)
+# Website: https://optisitus.web.id
+# ========================================================
+
+# --------------------------------------------------------
+# 1. ATURAN UMUM UNTUK SEMUA CRAWLER (DEFAULT)
+# --------------------------------------------------------
+User-agent: *
+Allow: /
+
+# Izinkan rendering penuh seluruh aset web (CSS, JS, Gambar, Vendor)
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/img/
+Allow: /assets/vendor/
+
+# Blokir akses ke file internal, dokumentasi markdown, dan file konfigurasi
+Disallow: /*.md$
+Disallow: /*.json$
+Disallow: /.*
+
+# --------------------------------------------------------
+# 2. CRAWLER MESIN PENCARI UTAMA (SEARCH ENGINES)
+# --------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/img/
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# --------------------------------------------------------
+# 3. AI & ANSWER ENGINE OPTIMIZATION (AEO / GEO)
+# Mengizinkan AI Crawler agar OptiSitus direferensikan dalam
+# pencarian AI (ChatGPT, SearchGPT, Perplexity, Claude, Gemini)
+# --------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+# --------------------------------------------------------
+# 4. BLOKIR BOT AGRESIF & SCRAPER YANG MEMBOROSKAN RESOURCE
+# --------------------------------------------------------
+User-agent: PetalBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+# --------------------------------------------------------
+# 5. SITEMAP RESMI
+# --------------------------------------------------------
+Sitemap: https://optisitus.web.id/sitemap.xml
