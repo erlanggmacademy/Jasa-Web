@@ -664,13 +664,19 @@ h6 {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: all 0.4s;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  contain: layout style paint;
 }
 
 .scroll-top i {
+  width: 24px;
+  height: 24px;
   font-size: 24px;
+  line-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
-  line-height: 0;
 }
 
 .scroll-top:hover {
@@ -2579,8 +2585,9 @@ section,
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 18px rgba(37, 211, 102, 0.5);
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
   text-decoration: none;
+  contain: layout style paint;
 }
 
 .floating-wa::before {
@@ -2592,11 +2599,17 @@ section,
   animation: wa-pulse 2.2s infinite;
   z-index: -1;
   pointer-events: none;
+  contain: strict;
 }
 
 .floating-wa i {
-  font-size: 33px;
-  line-height: 1;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  line-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
 }
 

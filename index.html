@@ -31,304 +31,27 @@
   <link href="assets/img/favicon.webp" rel="icon" type="image/webp">
   <link href="assets/img/apple-touch-icon.webp" rel="apple-touch-icon" type="image/webp">
 
-  <!-- Preload Critical Above-The-Fold Assets -->
+  <!-- Preload Critical Above-The-Fold Assets & Fonts -->
   <link rel="preload" as="image" href="assets/img/logo-header.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/img/hero-showcase-website-banyuwangi-xs.webp" media="(max-width: 576px)" type="image/webp">
+  <link rel="preload" as="image" href="assets/img/hero-showcase-website-banyuwangi-sm.webp" media="(min-width: 577px) and (max-width: 991px)" type="image/webp">
   <link rel="preload" as="image" href="assets/img/hero-showcase-website-banyuwangi.webp" media="(min-width: 992px)" type="image/webp">
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?e34853135f9e39acf64315236852cd5a" as="font" type="font/woff2" crossorigin>
 
-  <!-- Google Fonts - Asynchronous Non-Blocking Load with Minimal Weights -->
+  <!-- Google Fonts - Zero CLS with display=optional -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap">
-  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=optional" rel="stylesheet">
 
-  <!-- Critical Inline CSS for Instant Mobile FCP & LCP (< 1.5s) -->
-  <style id="critical-css">
-    :root {
-      --default-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      --heading-font: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      --nav-font: "Inter", sans-serif;
-      --background-color: #0a1020;
-      --default-color: #aeb9cc;
-      --heading-color: #ffffff;
-      --accent-color: #38bdf8;
-      --surface-color: #192134;
-      --contrast-color: #ffffff;
-      --nav-color: #aeb9cc;
-      --nav-hover-color: #38bdf8;
-      --nav-mobile-background-color: #0a1020;
-      --nav-dropdown-background-color: #0a1020;
-      --nav-dropdown-color: #aeb9cc;
-      --nav-dropdown-hover-color: #38bdf8;
-      scroll-behavior: smooth;
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    body {
-      margin: 0;
-      color: var(--default-color);
-      background-color: var(--background-color);
-      font-family: var(--default-font);
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      -webkit-text-size-adjust: 100%;
-    }
-    a { color: var(--accent-color); text-decoration: none; transition: 0.3s; }
-    h1, h2, h3, h4, h5, h6 { margin-top: 0; color: var(--heading-color); font-family: var(--heading-font); }
-    p { margin-top: 0; margin-bottom: 1rem; }
-    .container, .container-fluid, .container-xl {
-      width: 100%;
-      padding-right: 0.75rem;
-      padding-left: 0.75rem;
-      margin-right: auto;
-      margin-left: auto;
-    }
-    @media (min-width: 576px) { .container { max-width: 540px; } }
-    @media (min-width: 768px) { .container { max-width: 720px; } }
-    @media (min-width: 992px) { .container { max-width: 960px; } }
-    @media (min-width: 1200px) { .container, .container-xl { max-width: 1140px; } }
-    @media (min-width: 1400px) { .container, .container-xl { max-width: 1320px; } }
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      margin-right: -0.75rem;
-      margin-left: -0.75rem;
-    }
-    .row > * {
-      flex-shrink: 0;
-      width: 100%;
-      max-width: 100%;
-      padding-right: 0.75rem;
-      padding-left: 0.75rem;
-    }
-    .justify-content-center { justify-content: center !important; }
-    .text-center { text-align: center !important; }
-    .position-relative { position: relative !important; }
-    .d-flex { display: flex !important; }
-    .align-items-center { align-items: center !important; }
-    .justify-content-between { justify-content: space-between !important; }
-    @media (min-width: 1200px) {
-      .col-lg-10 { flex: 0 0 auto; width: 83.33333333%; }
-      .d-xl-none { display: none !important; }
-      .d-xl-inline-flex { display: inline-flex !important; }
-    }
-    @media (max-width: 1199.98px) {
-      .d-none { display: none !important; }
-    }
-    .sticky-top { position: sticky; top: 0; z-index: 1020; }
-    .img-fluid { max-width: 100%; height: auto; }
-    .w-100 { width: 100% !important; }
-    .header {
-      color: var(--default-color);
-      background-color: color-mix(in srgb, var(--background-color) 82%, transparent);
-      border-bottom: 1px solid color-mix(in srgb, var(--default-color) 8%, transparent);
-      padding: 14px 0;
-      transition: all 0.4s ease;
-      z-index: 997;
-    }
-    .header .logo { line-height: 1; }
-    .header .logo img { max-height: 48px; width: auto; }
-    .header .cta-btn {
-      align-items: center;
-      gap: 8px;
-      padding: 11px 24px;
-      border-radius: 50px;
-      background: linear-gradient(135deg, #0284c7, #1d4ed8);
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 15px;
-      white-space: nowrap;
-      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
-      transition: all 0.3s ease;
-    }
-    .mobile-nav-toggle {
-      color: var(--heading-color);
-      font-size: 28px;
-      line-height: 0;
-      margin-right: 10px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0;
-    }
-    @media (min-width: 1200px) {
-      .navmenu { padding: 0; }
-      .navmenu ul { margin: 0; padding: 0; display: flex; list-style: none; align-items: center; }
-      .navmenu li { position: relative; margin: 0 2px; }
-      .navmenu a { color: var(--nav-color); padding: 18px 15px; font-size: 16px; font-family: var(--nav-font); font-weight: 400; display: flex; align-items: center; justify-content: space-between; white-space: nowrap; transition: 0.3s; position: relative; }
-      .navmenu a:hover, .navmenu .active { color: var(--nav-hover-color); }
-      .navmenu a::after { content: ""; position: absolute; bottom: 8px; left: 15px; right: 15px; height: 2px; background: var(--accent-color); border-radius: 2px; transform: scaleX(0); transition: transform 0.3s ease; }
-      .navmenu a:hover::after, .navmenu .active::after { transform: scaleX(1); }
-      .navmenu .dropdown ul { display: none; }
-    }
-    @media (max-width: 1199.98px) {
-      .navmenu { display: none; }
-    }
-    .hero {
-      padding: 85px 0 80px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: -30%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 900px;
-      height: 600px;
-      background: radial-gradient(ellipse, color-mix(in srgb, var(--accent-color) 12%, transparent), transparent 65%);
-      z-index: 0;
-    }
-    .hero .container { position: relative; z-index: 1; }
-    .hero .avatar {
-      width: 110px;
-      height: 110px;
-      margin: 0 auto 18px;
-      border-radius: 50%;
-      padding: 5px;
-      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 60%, #f06cae));
-    }
-    .hero .avatar img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--background-color);
-    }
-    .hero .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 16px;
-      border-radius: 24px;
-      background: color-mix(in srgb, var(--accent-color) 10%, transparent);
-      color: var(--accent-color);
-      font-size: 13.5px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-    .hero .status .ping {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent-color);
-      box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color) 20%, transparent);
-    }
-    .hero h1 {
-      font-size: 48px;
-      line-height: 1.18;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 24px;
-    }
-    .hero h1 .hl { color: var(--accent-color); }
-    .hero .lead {
-      font-size: 18px;
-      line-height: 1.7;
-      max-width: 640px;
-      margin: 0 auto 32px;
-    }
-    .hero .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: center;
-      margin-bottom: 40px;
-    }
-    .hero .btn-main {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 30px;
-      border-radius: 50px;
-      background: linear-gradient(135deg, #0284c7, #1d4ed8);
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 16px;
-      border: none;
-      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
-      transition: all 0.3s ease;
-    }
-    .hero .btn-line {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 28px;
-      border-radius: 50px;
-      background: transparent;
-      color: var(--heading-color);
-      font-weight: 600;
-      border: 1px solid color-mix(in srgb, var(--default-color) 20%, transparent);
-      transition: all 0.3s ease;
-    }
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 30px;
-    }
-    .hero-badge-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 500;
-      color: #cbd5e1;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .hero-badge-item i { color: var(--accent-color); }
-    @media (max-width: 768px) {
-      .hero { padding: 70px 0 50px; }
-      .hero h1 { font-size: 32px; line-height: 1.25; }
-      .hero .lead { font-size: 16px; }
-      .hero .actions .btn-main, .hero .actions .btn-line { width: 100%; justify-content: center; }
-      .hero-badges { gap: 8px; }
-      .hero-badge-item { font-size: 12px; padding: 5px 12px; }
-    }
-    .hero-showcase { margin-top: 50px; position: relative; }
-    .hero-showcase-inner {
-      position: relative;
-      display: inline-block;
-      max-width: 980px;
-      width: 100%;
-      border-radius: 20px;
-      padding: 10px;
-      background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.28), rgba(7, 13, 25, 0.9) 70%);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 50px -10px rgba(37, 99, 235, 0.3);
-      backdrop-filter: blur(12px);
-    }
-    .hero-showcase-inner img {
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      display: block;
-    }
-  </style>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-  <!-- Asynchronous Non-Blocking Full Stylesheets (Eliminates Render-Blocking CSS) -->
-  <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.min.css">
-  </noscript>
-
-  <!-- Deferred Non-Critical CSS Files (Non-Render-Blocking) -->
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
-  </noscript>
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  </noscript>
+  <!-- Main CSS File -->
+  <link href="assets/css/main.min.css" rel="stylesheet">
 
   <!-- Structured Data (JSON-LD) for Organization & WebSite -->
   <script type="application/ld+json">
@@ -581,7 +304,7 @@
                     srcset="assets/img/hero-showcase-website-banyuwangi-sm.webp 720w, assets/img/hero-showcase-website-banyuwangi.webp 1200w"
                     sizes="(max-width: 576px) 100vw, (max-width: 991px) 720px, 980px"
                     alt="Mockup Desain Website Modern Banyuwangi di Laptop dan Smartphone karya OptiSitus"
-                    class="img-fluid w-100" width="1200" height="670" loading="lazy" decoding="async">
+                    class="img-fluid w-100" width="1200" height="670" loading="eager" fetchpriority="high" decoding="async">
                 </picture>
               </div>
             </div>
@@ -685,28 +408,28 @@
           <div class="col-lg-3 col-6">
             <div class="counter">
               <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
-                class="purecounter"></span><span class="plus">%</span>
+                class="purecounter">100</span><span class="plus">%</span>
               <p>Responsif di Smartphone</p>
             </div>
           </div>
           <div class="col-lg-3 col-6">
             <div class="counter">
               <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1"
-                class="purecounter"></span><span class="plus"> on 1</span>
+                class="purecounter">1</span><span class="plus"> on 1</span>
               <p>Konsultasi Langsung</p>
             </div>
           </div>
           <div class="col-lg-3 col-6">
             <div class="counter">
               <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
-                class="purecounter"></span><span class="plus">%</span>
+                class="purecounter">100</span><span class="plus">%</span>
               <p>Kepemilikan Aset Klien</p>
             </div>
           </div>
           <div class="col-lg-3 col-6">
             <div class="counter">
               <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
-                class="purecounter"></span><span class="plus"> Biaya</span>
+                class="purecounter">0</span><span class="plus"> Biaya</span>
               <p>Tersembunyi (Transparan)</p>
             </div>
           </div>
@@ -1710,7 +1433,9 @@
     aria-label="Kembali ke atas"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files (Deferred & Optimized) -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
   <script src="assets/vendor/aos/aos.js" defer></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.min.js" defer></script>

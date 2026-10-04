@@ -117,14 +117,20 @@
       });
     }
   }
-  window.addEventListener('load', aosInit);
+  // Script is loaded with `defer`, so AOS is available here and AOS.init
+  // hooks DOMContentLoaded itself — no need to wait for all images (window load).
+  aosInit();
 
   /**
    * Initiate Pure Counter (safe check)
    */
-  if (typeof PureCounter === 'function') {
-    new PureCounter();
+  function initPureCounter() {
+    if (typeof PureCounter === 'function') {
+      new PureCounter();
+    }
   }
+  window.addEventListener('load', initPureCounter);
+  initPureCounter();
 
   /**
    * Animate the skills items on reveal (Native IntersectionObserver - zero reflow)
@@ -193,48 +199,31 @@
   });
 
   /**
-   * Navmenu Multi-page & Section Scrollspy
+   * Navmenu Multi-page & Section Scrollspy (Optimized: zero forced reflow)
    */
   const navmenulinks = document.querySelectorAll('.navmenu a');
+  const topLevelNavUl = document.querySelector('.navmenu > ul');
+  const hashNavLinks = Array.from(navmenulinks).filter(link => link.hash && link.hash.startsWith('#') && link.hash.length > 1);
 
-  function navmenuScrollspy() {
-    // Current page filename / slug normalized
+  // Set active class based on page URL once on init (zero DOM recalculations during scroll)
+  function initActiveNavLinks() {
     const rawPath = window.location.pathname.replace(/\/$/, '') || '/';
     const currentSlug = rawPath.replace(/\.html$/, '').split('/').pop() || 'index';
-    
-    // Find section matching active hash in navmenu only if hash links exist
-    let currentHash = null;
-    const position = window.scrollY + 200;
-    const hashLinks = Array.from(navmenulinks).filter(link => link.hash && link.hash.startsWith('#'));
-
-    if (hashLinks.length > 0) {
-      hashLinks.forEach(link => {
-        try {
-          const section = document.querySelector(link.hash);
-          if (section) {
-            if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-              currentHash = link.hash;
-            }
-          }
-        } catch (err) {}
-      });
-    }
 
     navmenulinks.forEach(link => {
       const linkHref = link.getAttribute('href');
       if (!linkHref) return;
-      
+
       const linkClean = linkHref.split('#')[0].replace(/\/$/, '') || '/';
       const linkSlug = linkClean.replace(/\.html$/, '').split('/').pop() || 'index';
 
-      const isTopLevel = link.closest('ul') === document.querySelector('.navmenu > ul');
+      const isTopLevel = link.closest('ul') === topLevelNavUl;
       const isDropdownChild = !!link.closest('.dropdown ul');
 
       const isServiceSubpage = rawPath.includes('/layanan/') || rawPath.includes('layanan');
       const isPortfolioSubpage = rawPath.includes('/portofolio/') || rawPath.includes('portofolio');
       const isBlogSubpage = rawPath.includes('/blog/') || rawPath.includes('blog');
 
-      // Check if this link represents the current page
       const isHomeLink = linkClean === '/' || linkSlug === 'index';
       const isAtHome = rawPath === '/' || currentSlug === 'index';
 
@@ -244,29 +233,40 @@
                             (isPortfolioSubpage && linkSlug === 'portofolio' && isTopLevel) ||
                             (isBlogSubpage && linkSlug === 'blog' && isTopLevel);
 
-      if (isTopLevel) {
-        if (isCurrentPage) {
-          link.classList.add('active');
-        } else {
-          if (currentHash && link.hash === currentHash) {
-            link.classList.add('active');
-          } else if (!link.hash) {
-            link.classList.remove('active');
+      if (isCurrentPage) {
+        link.classList.add('active');
+      }
+    });
+  }
+  initActiveNavLinks();
+
+  function navmenuScrollspy() {
+    if (hashNavLinks.length === 0) return;
+
+    let currentHash = null;
+    const position = window.scrollY + 200;
+
+    hashNavLinks.forEach(link => {
+      try {
+        const section = document.querySelector(link.hash);
+        if (section) {
+          if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+            currentHash = link.hash;
           }
         }
-      } else if (isDropdownChild) {
-        if ((linkClean === rawPath || linkSlug === currentSlug) && !link.hash) {
-          link.classList.add('active');
-        } else if (currentHash && link.hash === currentHash) {
+      } catch (err) {}
+    });
+
+    if (currentHash) {
+      hashNavLinks.forEach(link => {
+        if (link.hash === currentHash) {
           link.classList.add('active');
         } else {
           link.classList.remove('active');
         }
-      }
-    });
+      });
+    }
   }
-
-  window.addEventListener('load', navmenuScrollspy);
 
   /**
    * Unified, high-performance throttled scroll runner (Zero forced reflow)
@@ -277,7 +277,9 @@
       window.requestAnimationFrame(() => {
         toggleScrolled();
         toggleScrollTop();
-        navmenuScrollspy();
+        if (hashNavLinks.length > 0) {
+          navmenuScrollspy();
+        }
         isScrollTicking = false;
       });
       isScrollTicking = true;
