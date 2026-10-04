@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>404: Halaman Tidak Ditemukan | OptiSitus Banyuwangi</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.webp" rel="icon" type="image/webp">
+  <link href="assets/img/apple-touch-icon.webp" rel="apple-touch-icon" type="image/webp">
+
+  <!-- Preload Critical Fonts -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Dedicated 404 Page Styling */
+    .error-section {
+      padding: 70px 0 90px;
+      position: relative;
+    }
+
+    .error-hero-box {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 55px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .error-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.32);
+      color: #f87171;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 6px 18px;
+      border-radius: 999px;
+      margin-bottom: 22px;
+      letter-spacing: 0.02em;
+    }
+
+    .error-badge .ping-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ef4444;
+      box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.25);
+    }
+
+    .error-code-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .error-code {
+      font-size: clamp(6rem, 16vw, 10.5rem);
+      font-weight: 800;
+      font-family: var(--heading-font);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      background: linear-gradient(180deg, #ffffff 30%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      margin: 0;
+      filter: drop-shadow(0 12px 35px rgba(56, 189, 248, 0.25));
+    }
+
+    .error-code-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, transparent 70%);
+      filter: blur(45px);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .error-title {
+      font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 16px;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+
+    .error-desc {
+      font-size: 16px;
+      color: color-mix(in srgb, var(--default-color) 85%, transparent);
+      line-height: 1.7;
+      max-width: 660px;
+      margin: 0 auto 32px;
+    }
+
+    .error-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .error-actions .btn-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 28px;
+      border-radius: 50px;
+      background: transparent;
+      color: var(--heading-color);
+      font-weight: 600;
+      font-size: 15px;
+      border: 1px solid color-mix(in srgb, var(--default-color) 25%, transparent);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .error-actions .btn-line:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--accent-color);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Destination Cards */
+    .dest-section-header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .dest-section-header span {
+      color: var(--accent-color);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .dest-section-header h3 {
+      font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .dest-section-header p {
+      color: color-mix(in srgb, var(--default-color) 75%, transparent);
+      font-size: 14.5px;
+      margin: 0;
+    }
+
+    .dest-card {
+      background: #0d1527;
+      border: 1px solid color-mix(in srgb, var(--default-color) 12%, transparent);
+      border-radius: 18px;
+      padding: 28px 24px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dest-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .dest-card:hover {
+      border-color: color-mix(in srgb, var(--accent-color) 45%, transparent);
+      background: #111b33;
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 25px rgba(56, 189, 248, 0.12);
+    }
+
+    .dest-card:hover::before {
+      opacity: 1;
+    }
+
+    .dest-card .icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 15px;
+      background: color-mix(in srgb, var(--accent-color) 14%, transparent);
+      color: var(--accent-color);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      margin-bottom: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .dest-card:hover .icon-box {
+      background: var(--accent-color);
+      color: #070d19;
+      transform: scale(1.05);
+    }
+
+    .dest-card h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .dest-card p {
+      font-size: 13.5px;
+      color: color-mix(in srgb, var(--default-color) 75%, transparent);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .dest-card .card-cta {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent-color);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.25s ease;
+    }
+
+    .dest-card:hover .card-cta {
+      gap: 10px;
+      color: #60a5fa;
+    }
+
+    /* Quick Pills Box */
+    .quick-pills-box {
+      margin-top: 50px;
+      background: rgba(13, 21, 39, 0.7);
+      border: 1px solid color-mix(in srgb, var(--default-color) 12%, transparent);
+      border-radius: 18px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+    }
+
+    .quick-pills-box h5 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .quick-pills-box h5 i {
+      color: var(--accent-color);
+      font-size: 17px;
+    }
+
+    .pills-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-pill-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      color: #cbd5e1;
+      font-size: 13.5px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .nav-pill-item i {
+      color: var(--accent-color);
+      font-size: 14px;
+    }
+
+    .nav-pill-item:hover {
+      background: color-mix(in srgb, var(--accent-color) 18%, transparent);
+      border-color: color-mix(in srgb, var(--accent-color) 50%, transparent);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Assistance Box */
+    .assistance-card {
+      margin-top: 40px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(37, 99, 235, 0.2), transparent 75%), #0c1426;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 20px;
+      padding: 35px 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    .assistance-card h4 {
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .assistance-card p {
+      color: color-mix(in srgb, var(--default-color) 80%, transparent);
+      font-size: 14.5px;
+      max-width: 640px;
+      margin: 0 auto 24px;
+      line-height: 1.65;
+    }
+  </style>
+</head>
+
+<body class="error-404-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="/" class="logo d-flex align-items-center" aria-label="Beranda OptiSitus">
+        <img src="assets/img/logo-header.webp" alt="OptiSitus - Jasa Pembuatan Website Banyuwangi" class="logo-img"
+          width="160" height="48">
+      </a>
+
+      <nav id="navmenu" class="navmenu" aria-label="Menu Utama">
+        <ul>
+          <li><a href="/">Beranda</a></li>
+          <li><a href="/tentang-kami">Tentang Kami</a></li>
+          <li class="dropdown">
+            <a href="/layanan"><span>Layanan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/layanan">Semua Layanan (Hub)</a></li>
+              <li><a href="/layanan/website-umkm-banyuwangi">Website UMKM Banyuwangi</a></li>
+              <li><a href="/layanan/website-company-profile">Website Company Profile</a></li>
+              <li><a href="/layanan/website-wisata-homestay">Website Wisata &amp; Homestay</a></li>
+              <li><a href="/layanan/landing-page-promosi">Landing Page Promosi</a></li>
+              <li><a href="/layanan/redesign-website-seo">Redesign &amp; Optimasi SEO</a></li>
+            </ul>
+          </li>
+          <li><a href="/portofolio">Portofolio</a></li>
+          <li><a href="/harga">Harga</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/galeri">Galeri</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Buka Menu Navigasi"></i>
+      </nav>
+
+      <a class="cta-btn d-none d-xl-inline-flex"
+        href="https://wa.me/6281907019403?text=Halo%20OptiSitus%2C%20saya%20ingin%20konsultasi%20pembuatan%20website."
+        target="_blank" rel="noopener" data-cta-position="header" data-service="general">
+        <i class="bi bi-whatsapp"></i> Chat WhatsApp
+      </a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+
+    <!-- Main 404 Section -->
+    <section class="error-section">
+      <div class="container">
+
+        <!-- 404 Hero Box -->
+        <div class="error-hero-box" data-aos="fade-up">
+          <div class="error-badge">
+            <span class="ping-dot"></span> Error 404 · Link Tidak Ditemukan
+          </div>
+
+          <div class="error-code-wrapper">
+            <div class="error-code-glow"></div>
+            <div class="error-code">404</div>
+          </div>
+
+          <h2 class="error-title">Oops! Halaman yang Anda Cari Tersesat atau Telah Berpindah</h2>
+          <p class="error-desc">
+            Konten yang Anda tuju tidak tersedia di alamat ini. Jangan khawatir, seluruh informasi layanan pembuatan website, paket biaya, dan portofolio OptiSitus tetap dapat Anda jelajahi lewat pilihan di bawah ini:
+          </p>
+
+          <div class="error-actions">
+            <a href="/" class="btn-main">
+              <i class="bi bi-house-door-fill"></i> Kembali ke Beranda
+            </a>
+            <a href="https://wa.me/6281907019403?text=Halo%20OptiSitus%2C%20saya%20mencari%20informasi%20di%20website%20namun%20muncul%20halaman%20404."
+              target="_blank" rel="noopener" class="btn-line" data-cta-position="404_hero" data-service="general">
+              <i class="bi bi-whatsapp"></i> Tanya Langsung via WA
+            </a>
+          </div>
+        </div>
+
+        <!-- Destinasi Populer Cards -->
+        <div class="dest-section-header" data-aos="fade-up" data-aos-delay="100">
+          <span>Pilihan Halaman Utama</span>
+          <h3>Halaman Populer yang Mungkin Anda Butuhkan</h3>
+          <p>Temukan solusi website dan informasi bisnis yang paling relevan dengan kebutuhan Anda</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+          <!-- Card 1: Layanan -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <a href="/layanan" class="dest-card">
+              <div class="icon-box">
+                <i class="bi bi-layers-fill"></i>
+              </div>
+              <h4>Layanan Pembuatan Web</h4>
+              <p>Solusi website lengkap untuk UMKM lokal, company profile, homestay wisata, hingga landing page iklan terarah.</p>
+              <div class="card-cta">
+                <span>Lihat Semua Layanan</span> <i class="bi bi-arrow-right"></i>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 2: Harga -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <a href="/harga" class="dest-card">
+              <div class="icon-box">
+                <i class="bi bi-tags-fill"></i>
+              </div>
+              <h4>Paket &amp; Biaya Transparan</h4>
+              <p>Pilihan paket hemat mulai Rp 850.000 sekali bayar, sudah termasuk domain, hosting 1 tahun, SSL, dan optimasi SEO.</p>
+              <div class="card-cta">
+                <span>Cek Daftar Harga</span> <i class="bi bi-arrow-right"></i>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 3: Portofolio -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="250">
+            <a href="/portofolio" class="dest-card">
+              <div class="icon-box">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <h4>Portofolio &amp; Karya Klien</h4>
+              <p>Contoh website nyata pelaku usaha Banyuwangi seperti homestay Ijen, kedai kuliner, batik Osing, dan bengkel teknik.</p>
+              <div class="card-cta">
+                <span>Eksplor Portofolio</span> <i class="bi bi-arrow-right"></i>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 4: Blog -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <a href="/blog" class="dest-card">
+              <div class="icon-box">
+                <i class="bi bi-journal-text"></i>
+              </div>
+              <h4>Blog &amp; Panduan Digital</h4>
+              <p>Artikel praktis tentang strategi SEO lokal Google, tips promosi digital, dan alasan mengapa bisnis butuh website resmi.</p>
+              <div class="card-cta">
+                <span>Baca Artikel Blog</span> <i class="bi bi-arrow-right"></i>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Quick Links / Tag Pills -->
+        <div class="quick-pills-box" data-aos="fade-up" data-aos-delay="350">
+          <h5><i class="bi bi-grid-fill"></i> Akses Cepat Kategori Layanan Spesifik:</h5>
+          <div class="pills-wrapper">
+            <a href="/layanan/website-umkm-banyuwangi" class="nav-pill-item">
+              <i class="bi bi-shop"></i> Website UMKM Banyuwangi
+            </a>
+            <a href="/layanan/website-company-profile" class="nav-pill-item">
+              <i class="bi bi-building"></i> Company Profile Perusahaan
+            </a>
+            <a href="/layanan/website-wisata-homestay" class="nav-pill-item">
+              <i class="bi bi-tree"></i> Homestay &amp; Wisata Ijen
+            </a>
+            <a href="/layanan/landing-page-promosi" class="nav-pill-item">
+              <i class="bi bi-rocket-takeoff"></i> Landing Page Promosi Iklan
+            </a>
+            <a href="/layanan/redesign-website-seo" class="nav-pill-item">
+              <i class="bi bi-speedometer2"></i> Redesign &amp; Optimasi SEO
+            </a>
+            <a href="/tentang-kami" class="nav-pill-item">
+              <i class="bi bi-info-circle"></i> Tentang OptiSitus
+            </a>
+            <a href="/galeri" class="nav-pill-item">
+              <i class="bi bi-images"></i> Galeri Desain Web
+            </a>
+          </div>
+        </div>
+
+        <!-- Assistance Card -->
+        <div class="assistance-card" data-aos="fade-up" data-aos-delay="400">
+          <h4>Mencari Halaman Tertentu atau Butuh Bantuan?</h4>
+          <p>
+            Jika Anda sedang mencari halaman khusus atau ingin berkonsultasi mengenai pembuatan website bisnis Anda di Banyuwangi, silakan hubungi kami langsung. Kami siap merespons setiap hari pukul 08.00 – 21.00 WIB.
+          </p>
+          <a href="https://wa.me/6281907019403?text=Halo%20OptiSitus%2C%20saya%20ingin%20konsultasi%20pembuatan%20website."
+            target="_blank" rel="noopener" class="btn-main" data-cta-position="404_assistance" data-service="general">
+            <i class="bi bi-whatsapp"></i> Konsultasi Gratis via WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-12 footer-about">
+          <a href="/" class="logo d-flex align-items-center mb-3">
+            <img src="assets/img/logo-header.webp" alt="OptiSitus Logo" class="logo-img" width="180" height="52">
+          </a>
+          <p>Layanan profesional pembuatan website untuk pelaku UMKM, bisnis pariwisata, dan perusahaan di Banyuwangi,
+            Jawa Timur. Cepat, responsif, dan teroptimasi SEO lokal Google.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://wa.me/6281907019403" target="_blank" rel="noopener" aria-label="WhatsApp OptiSitus"><i
+                class="bi bi-whatsapp"></i></a>
+            <a href="mailto:kontak@optisitus.web.id" aria-label="Email OptiSitus"><i class="bi bi-envelope"></i></a>
+            <a href="https://optisitus.web.id/" aria-label="Website OptiSitus"><i class="bi bi-globe"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="/">Beranda</a></li>
+            <li><a href="/tentang-kami">Tentang Kami</a></li>
+            <li><a href="/layanan">Layanan</a></li>
+            <li><a href="/portofolio">Portofolio</a></li>
+            <li><a href="/harga">Harga</a></li>
+            <li><a href="/blog">Blog &amp; Artikel</a></li>
+            <li><a href="/galeri">Galeri Desain</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-6 footer-links">
+          <h4>Layanan Kami</h4>
+          <ul>
+            <li><a href="/layanan/website-umkm-banyuwangi">Website UMKM Banyuwangi</a></li>
+            <li><a href="/layanan/website-company-profile">Website Company Profile</a></li>
+            <li><a href="/layanan/website-wisata-homestay">Website Hotel &amp; Homestay</a></li>
+            <li><a href="/layanan/website-wisata-homestay">Website Tour &amp; Wisata Ijen</a></li>
+            <li><a href="/layanan/landing-page-promosi">Landing Page Iklan &amp; Promo</a></li>
+            <li><a href="/layanan/redesign-website-seo">Redesign &amp; Optimasi SEO</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact">
+          <h4>Hubungi OptiSitus</h4>
+          <p>Jl. Ahmad Yani No. 88, Banyuwangi, Jawa Timur, Indonesia</p>
+          <p class="mt-3"><strong>WhatsApp:</strong> <span>081907019403</span></p>
+          <p><strong>Email Cadangan:</strong> <span>kontak@optisitus.web.id</span></p>
+          <p><strong>Jam Layanan:</strong> <span>08.00 – 21.00 WIB</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">OptiSitus</strong>. <span>Hak Cipta Dilindungi.</span>
+      </p>
+    </div>
+
+  </footer>
+
+  <!-- Floating WhatsApp Button (Bulat di Kanan Bawah) -->
+  <a href="https://wa.me/6281907019403?text=Halo%20OptiSitus%2C%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20website."
+    class="floating-wa" target="_blank" rel="noopener" aria-label="Chat WhatsApp OptiSitus"
+    data-cta-position="floating_button" data-service="general">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Kembali ke atas"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- WhatsApp Click Tracking -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          const position = link.getAttribute('data-cta-position') || 'unknown';
+          const service = link.getAttribute('data-service') || 'general';
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              page: window.location.pathname,
+              cta_position: position,
+              service: service
+            });
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
