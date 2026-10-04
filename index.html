@@ -32,8 +32,10 @@
   <link href="assets/img/apple-touch-icon.webp" rel="apple-touch-icon" type="image/webp">
 
   <!-- Preload Critical Above-The-Fold Assets -->
-  <link rel="preload" as="image" href="assets/img/hero-showcase-website-banyuwangi-sm.webp" media="(max-width: 768px)" type="image/webp" fetchpriority="high">
-  <link rel="preload" as="image" href="assets/img/hero-showcase-website-banyuwangi.webp" media="(min-width: 769px)" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/hero-showcase-website-banyuwangi-sm.webp" media="(max-width: 768px)"
+    type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/hero-showcase-website-banyuwangi.webp" media="(min-width: 769px)"
+    type="image/webp" fetchpriority="high">
   <link rel="preload" as="image" href="assets/img/logo-header.webp" type="image/webp">
   <link rel="preload" as="style" href="assets/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="preload" as="style" href="assets/css/main.min.css">
@@ -41,10 +43,14 @@
   <!-- Google Fonts - Asynchronous Non-Blocking Load -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" media="print" onload="this.media='all'">
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+    media="print" onload="this.media='all'">
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap">
   </noscript>
 
   <!-- Core CSS Files -->
@@ -52,10 +58,15 @@
   <link href="assets/css/main.min.css" rel="stylesheet">
 
   <!-- Deferred Non-Critical CSS Files (Non-Render-Blocking) -->
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet"></noscript>
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  </noscript>
   <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="assets/vendor/aos/aos.css" rel="stylesheet"></noscript>
+  <noscript>
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  </noscript>
 
   <!-- Structured Data (JSON-LD) for Organization & WebSite -->
   <script type="application/ld+json">
@@ -229,24 +240,25 @@
       <nav id="navmenu" class="navmenu" aria-label="Menu Utama">
         <ul>
           <li><a href="/" class="active">Beranda</a></li>
-          <li><a href="tentang-kami.html">Tentang Kami</a></li>
+          <li><a href="/tentang-kami">Tentang Kami</a></li>
           <li class="dropdown">
-            <a href="layanan.html"><span>Layanan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <a href="/layanan"><span>Layanan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="layanan.html">Semua Layanan (Hub)</a></li>
-              <li><a href="layanan/website-umkm-banyuwangi.html">Website UMKM Banyuwangi</a></li>
-              <li><a href="layanan/website-company-profile.html">Website Company Profile</a></li>
-              <li><a href="layanan/website-wisata-homestay.html">Website Wisata &amp; Homestay</a></li>
-              <li><a href="layanan/landing-page-promosi.html">Landing Page Promosi</a></li>
-              <li><a href="layanan/redesign-website-seo.html">Redesign &amp; Optimasi SEO</a></li>
+              <li><a href="/layanan">Semua Layanan (Hub)</a></li>
+              <li><a href="/layanan/website-umkm-banyuwangi">Website UMKM Banyuwangi</a></li>
+              <li><a href="/layanan/website-company-profile">Website Company Profile</a></li>
+              <li><a href="/layanan/website-wisata-homestay">Website Wisata &amp; Homestay</a></li>
+              <li><a href="/layanan/landing-page-promosi">Landing Page Promosi</a></li>
+              <li><a href="/layanan/redesign-website-seo">Redesign &amp; Optimasi SEO</a></li>
             </ul>
           </li>
-          <li><a href="portofolio.html">Portofolio</a></li>
-          <li><a href="harga.html">Harga</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="/portofolio">Portofolio</a></li>
+          <li><a href="/harga">Harga</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/galeri">Galeri</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="Buka Menu Navigasi"></i>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" tabindex="0"
+          aria-label="Buka Menu Navigasi"></i>
       </nav>
 
       <a class="cta-btn d-none d-xl-inline-flex"
@@ -285,7 +297,7 @@
                 class="btn-main" target="_blank" rel="noopener" data-cta-position="hero" data-service="general">
                 <i class="bi bi-whatsapp"></i> Konsultasi WhatsApp Gratis
               </a>
-              <a href="#pricing" class="btn-line">Lihat Paket &amp; Harga <i class="bi bi-arrow-right"></i></a>
+              <a href="/harga" class="btn-line">Lihat Paket &amp; Harga <i class="bi bi-arrow-right"></i></a>
             </div>
 
             <!-- Trust Badges -->
@@ -301,10 +313,10 @@
             <div class="hero-showcase">
               <div class="hero-showcase-inner">
                 <img src="assets/img/hero-showcase-website-banyuwangi.webp"
-                     srcset="assets/img/hero-showcase-website-banyuwangi-sm.webp 720w, assets/img/hero-showcase-website-banyuwangi.webp 1200w"
-                     sizes="(max-width: 768px) 100vw, 1200px"
-                     alt="Mockup Desain Website Modern Banyuwangi di Laptop dan Smartphone karya OptiSitus"
-                     class="img-fluid w-100" width="1200" height="670" loading="eager" fetchpriority="high">
+                  srcset="assets/img/hero-showcase-website-banyuwangi-sm.webp 720w, assets/img/hero-showcase-website-banyuwangi.webp 1200w"
+                  sizes="(max-width: 768px) 100vw, 1200px"
+                  alt="Mockup Desain Website Modern Banyuwangi di Laptop dan Smartphone karya OptiSitus"
+                  class="img-fluid w-100" width="1200" height="670" loading="eager" fetchpriority="high">
               </div>
             </div>
 
@@ -452,9 +464,8 @@
         <div class="row g-0 service-rows">
 
           <div class="col-12" data-aos="fade-up" data-aos-delay="100">
-            <a href="https://wa.me/6281907019403?text=Halo%20OptiSitus%2C%20saya%20tertarik%20membuat%20website%20untuk%20UMKM%20saya."
-              target="_blank" rel="noopener" class="row-item" data-cta-position="service_list"
-              data-service="website_umkm">
+            <a href="/layanan/website-umkm-banyuwangi" class="row-item" data-cta-position="service_list"
+              data-service="website_umkm" aria-label="Lihat detail layanan Website UMKM Banyuwangi">
               <span class="n">01</span>
               <div class="body">
                 <h3>Website UMKM &amp; Usaha Lokal</h3>
@@ -466,9 +477,8 @@
           </div>
 
           <div class="col-12" data-aos="fade-up" data-aos-delay="150">
-            <a href="https://wa.me/6281907019403?text=Halo%20OptiSitus%2C%20saya%20ingin%20membuat%20website%20company%20profile."
-              target="_blank" rel="noopener" class="row-item" data-cta-position="service_list"
-              data-service="company_profile">
+            <a href="/layanan/website-company-profile" class="row-item" data-cta-position="service_list"
+              data-service="company_profile" aria-label="Lihat detail layanan Website Company Profile Perusahaan">
               <span class="n">02</span>
               <div class="body">
                 <h3>Website Company Profile Perusahaan</h3>
@@ -480,9 +490,8 @@
           </div>
 
           <div class="col-12" data-aos="fade-up" data-aos-delay="200">
-            <a href="https://wa.me/6281907019403?text=Halo%20OptiSitus%2C%20saya%20ingin%20membuat%20website%20hotel%2Fwisata%20di%20Banyuwangi."
-              target="_blank" rel="noopener" class="row-item" data-cta-position="service_list"
-              data-service="wisata_homestay">
+            <a href="/layanan/website-wisata-homestay" class="row-item" data-cta-position="service_list"
+              data-service="wisata_homestay" aria-label="Lihat detail layanan Website Wisata dan Homestay Banyuwangi">
               <span class="n">03</span>
               <div class="body">
                 <h3>Website Homestay, Hotel &amp; Wisata</h3>
@@ -494,9 +503,8 @@
           </div>
 
           <div class="col-12" data-aos="fade-up" data-aos-delay="250">
-            <a href="https://wa.me/6281907019403?text=Halo%20OptiSitus%2C%20saya%20ingin%20membuat%20landing%20page%20promosi%20di%20Banyuwangi."
-              target="_blank" rel="noopener" class="row-item" data-cta-position="service_list"
-              data-service="landing_page">
+            <a href="/layanan/landing-page-promosi" class="row-item" data-cta-position="service_list"
+              data-service="landing_page" aria-label="Lihat detail layanan Landing Page Promosi Iklan">
               <span class="n">04</span>
               <div class="body">
                 <h3>Landing Page Iklan &amp; Penjualan</h3>
@@ -508,9 +516,8 @@
           </div>
 
           <div class="col-12" data-aos="fade-up" data-aos-delay="300">
-            <a href="https://wa.me/6281907019403?text=Halo%20OptiSitus%2C%20saya%20ingin%20redesign%20dan%20optimasi%20SEO%20website."
-              target="_blank" rel="noopener" class="row-item" data-cta-position="service_list"
-              data-service="redesign_seo">
+            <a href="/layanan/redesign-website-seo" class="row-item" data-cta-position="service_list"
+              data-service="redesign_seo" aria-label="Lihat detail layanan Redesign dan Optimasi SEO Website">
               <span class="n">05</span>
               <div class="body">
                 <h3>Redesign &amp; Optimasi SEO Website</h3>
@@ -521,6 +528,12 @@
             </a>
           </div>
 
+        </div>
+
+        <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="350">
+          <a href="/layanan" class="btn-main" style="padding: 12px 28px; font-size: 15px;">
+            <i class="bi bi-grid-fill"></i> Lihat Seluruh Solusi Layanan (Hub)
+          </a>
         </div>
 
       </div>
@@ -593,8 +606,8 @@
                 <span class="skill"><span class="name">Transparansi Biaya &amp; Akses Penuh Klien</span> <i
                     class="val">100%</i></span>
                 <div class="bar">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100" aria-label="Transparansi Biaya dan Akses Penuh Klien 100%"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                    aria-label="Transparansi Biaya dan Akses Penuh Klien 100%"></div>
                 </div>
               </div>
 
@@ -635,8 +648,9 @@
             <div class="row g-4 align-items-center">
               <div class="col-lg-6">
                 <div class="shot">
-                  <img src="assets/img/portfolio/kedai-kopi-osing-banyuwangi.webp" alt="Studi Kasus Desain Website Warung Kopi &amp; Kuliner Osing Banyuwangi"
-                    class="img-fluid" width="600" height="400" loading="lazy">
+                  <img src="assets/img/portfolio/kedai-kopi-osing-banyuwangi.webp"
+                    alt="Studi Kasus Desain Website Warung Kopi &amp; Kuliner Osing Banyuwangi" class="img-fluid"
+                    width="600" height="400" loading="lazy">
                 </div>
               </div>
               <div class="col-lg-6">
@@ -674,8 +688,8 @@
               <div class="col-lg-6 order-lg-2">
                 <div class="shot">
                   <img src="assets/img/portfolio/website-wisata-homestay-ijen.webp"
-                    alt="Studi Kasus Website Ijen Discovery Tour &amp; Homestay" class="img-fluid" width="600" height="400"
-                    loading="lazy">
+                    alt="Studi Kasus Website Ijen Discovery Tour &amp; Homestay" class="img-fluid" width="600"
+                    height="400" loading="lazy">
                 </div>
               </div>
               <div class="col-lg-6 order-lg-1">
@@ -712,8 +726,9 @@
             <div class="row g-4 align-items-center">
               <div class="col-lg-6">
                 <div class="shot">
-                  <img src="assets/img/portfolio/company-profile-kontraktor-banyuwangi.webp" alt="Studi Kasus Website Company Profile Kontraktor Banyuwangi"
-                    class="img-fluid" width="600" height="400" loading="lazy">
+                  <img src="assets/img/portfolio/company-profile-kontraktor-banyuwangi.webp"
+                    alt="Studi Kasus Website Company Profile Kontraktor Banyuwangi" class="img-fluid" width="600"
+                    height="400" loading="lazy">
                 </div>
               </div>
               <div class="col-lg-6">
@@ -747,7 +762,7 @@
         </div>
 
         <div class="text-center mt-5" data-aos="fade-up">
-          <a href="portofolio.html" class="btn-main">
+          <a href="/portofolio" class="btn-main">
             <i class="bi bi-briefcase"></i> Lihat Semua Studi Kasus di Portofolio
           </a>
         </div>
@@ -1270,7 +1285,7 @@
                 transparan tanpa ikatan apa pun.</p>
               <a href="https://wa.me/6281907019403?text=Halo%20OptiSitus%2C%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20website."
                 target="_blank" rel="noopener" class="btn-main" data-cta-position="bottom_cta" data-service="general">
-                <i class="bi bi-whatsapp"></i> Hubungi WhatsApp 081907019403
+                <i class="bi bi-whatsapp"></i> Hubungi WhatsApp
               </a>
               <span class="note"><i class="bi bi-clock"></i> Respon cepat setiap hari kerja (08.00 – 21.00 WIB)</span>
             </div>
@@ -1378,24 +1393,24 @@
           <h3>Navigasi</h3>
           <ul>
             <li><a href="/">Beranda</a></li>
-            <li><a href="tentang-kami.html">Tentang Kami</a></li>
-            <li><a href="layanan.html">Layanan</a></li>
-            <li><a href="portofolio.html">Portofolio</a></li>
-            <li><a href="harga.html">Harga</a></li>
-            <li><a href="blog.html">Blog &amp; Artikel</a></li>
-            <li><a href="galeri.html">Galeri Desain</a></li>
+            <li><a href="/tentang-kami">Tentang Kami</a></li>
+            <li><a href="/layanan">Layanan</a></li>
+            <li><a href="/portofolio">Portofolio</a></li>
+            <li><a href="/harga">Harga</a></li>
+            <li><a href="/blog">Blog &amp; Artikel</a></li>
+            <li><a href="/galeri">Galeri Desain</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-6 footer-links">
           <h3>Layanan Kami</h3>
           <ul>
-            <li><a href="layanan/website-umkm-banyuwangi.html">Website UMKM Banyuwangi</a></li>
-            <li><a href="layanan/website-company-profile.html">Website Company Profile</a></li>
-            <li><a href="layanan/website-wisata-homestay.html">Website Hotel &amp; Homestay</a></li>
-            <li><a href="layanan/website-wisata-homestay.html">Website Tour &amp; Wisata Ijen</a></li>
-            <li><a href="layanan/landing-page-promosi.html">Landing Page Iklan &amp; Promo</a></li>
-            <li><a href="layanan/redesign-website-seo.html">Redesign &amp; Optimasi SEO</a></li>
+            <li><a href="/layanan/website-umkm-banyuwangi">Website UMKM Banyuwangi</a></li>
+            <li><a href="/layanan/website-company-profile">Website Company Profile</a></li>
+            <li><a href="/layanan/website-wisata-homestay">Website Hotel &amp; Homestay</a></li>
+            <li><a href="/layanan/website-wisata-homestay">Website Tour &amp; Wisata Ijen</a></li>
+            <li><a href="/layanan/landing-page-promosi">Landing Page Iklan &amp; Promo</a></li>
+            <li><a href="/layanan/redesign-website-seo">Redesign &amp; Optimasi SEO</a></li>
           </ul>
         </div>
 

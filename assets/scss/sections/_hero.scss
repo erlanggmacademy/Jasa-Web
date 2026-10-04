@@ -3,7 +3,7 @@
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding: 140px 0 90px;
+  padding: 85px 0 80px;
   position: relative;
   overflow: hidden;
 
@@ -25,9 +25,9 @@
   }
 
   .avatar {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 28px;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 18px;
     border-radius: 50%;
     padding: 5px;
     background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 60%, #f06cae));
@@ -45,13 +45,13 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 16px;
+    padding: 7px 16px;
     border-radius: 24px;
     background: color-mix(in srgb, var(--accent-color) 10%, transparent);
     color: var(--accent-color);
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 600;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 
     .ping {
       width: 8px;
@@ -95,18 +95,19 @@
     gap: 8px;
     padding: 14px 30px;
     border-radius: 30px;
-    background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 70%, #f06cae));
-    color: var(--contrast-color);
+    background: linear-gradient(135deg, #0284c7, #1d4ed8);
+    color: #ffffff;
     font-weight: 600;
     font-size: 16px;
     border: none;
-    box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color) 30%, transparent);
+    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
     transition: all 0.3s ease;
 
     &:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 28px color-mix(in srgb, var(--accent-color) 40%, transparent);
-      color: var(--contrast-color);
+      background: linear-gradient(135deg, #0369a1, #1e40af);
+      box-shadow: 0 12px 28px rgba(2, 132, 199, 0.45);
+      color: #ffffff;
     }
   }
 
@@ -156,14 +157,14 @@
 
       &:hover {
         background: var(--accent-color);
-        color: var(--contrast-color);
+        color: #ffffff;
         transform: translateY(-3px);
       }
     }
   }
 
   @media(max-width:768px) {
-    padding: 120px 0 60px;
+    padding: 70px 0 50px;
 
     h1 {
       font-size: 34px;

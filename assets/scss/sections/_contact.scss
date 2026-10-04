@@ -68,16 +68,17 @@
       padding: 14px 44px;
       border-radius: 30px;
       border: none;
-      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 70%, #f06cae));
-      color: var(--contrast-color);
+      background: linear-gradient(135deg, #0284c7, #1d4ed8);
+      color: #ffffff;
       font-weight: 600;
       font-size: 16px;
-      box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color) 30%, transparent);
+      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
       transition: all 0.3s ease;
 
       &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 12px 28px color-mix(in srgb, var(--accent-color) 40%, transparent);
+        background: linear-gradient(135deg, #0369a1, #1e40af);
+      box-shadow: 0 12px 28px rgba(2, 132, 199, 0.45);
       }
     }
   }

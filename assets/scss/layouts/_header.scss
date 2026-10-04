@@ -48,22 +48,24 @@
     gap: 8px;
     padding: 11px 24px;
     border-radius: 30px;
-    background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 70%, #f06cae));
-    color: var(--contrast-color);
+    background: linear-gradient(135deg, #0284c7, #1d4ed8);
+    color: #ffffff;
     font-weight: 600;
     font-size: 15px;
     white-space: nowrap;
-    box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color) 30%, transparent);
+    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
     transition: all 0.3s ease;
 
     i {
       transition: transform 0.3s ease;
+      color: #ffffff;
     }
 
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 26px color-mix(in srgb, var(--accent-color) 40%, transparent);
-      color: var(--contrast-color);
+      background: linear-gradient(135deg, #0369a1, #1e40af);
+      box-shadow: 0 12px 26px rgba(2, 132, 199, 0.45);
+      color: #ffffff;
 
       i {
         transform: translate(2px, -2px);

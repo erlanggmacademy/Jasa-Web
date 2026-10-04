@@ -198,8 +198,9 @@
   const navmenulinks = document.querySelectorAll('.navmenu a');
 
   function navmenuScrollspy() {
-    // Current page filename, e.g. "layanan.html" or "index.html"
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    // Current page filename / slug normalized
+    const rawPath = window.location.pathname.replace(/\/$/, '') || '/';
+    const currentSlug = rawPath.replace(/\.html$/, '').split('/').pop() || 'index';
     
     // Find section matching active hash in navmenu if any
     let currentHash = null;
@@ -224,28 +225,30 @@
       const linkHref = link.getAttribute('href');
       if (!linkHref) return;
       
-      const linkPath = linkHref.split('#')[0].split('/').pop();
+      const linkClean = linkHref.split('#')[0].replace(/\/$/, '') || '/';
+      const linkSlug = linkClean.replace(/\.html$/, '').split('/').pop() || 'index';
+
       const isTopLevel = link.closest('ul') === document.querySelector('.navmenu > ul');
       const isDropdownChild = !!link.closest('.dropdown ul');
 
-      const isServiceSubpage = window.location.pathname.includes('/layanan/') || currentPath.includes('layanan');
-      const isPortfolioSubpage = window.location.pathname.includes('/portofolio/') || currentPath.includes('portofolio');
-      const isBlogSubpage = window.location.pathname.includes('/blog/') || currentPath.includes('blog');
+      const isServiceSubpage = rawPath.includes('/layanan/') || rawPath.includes('layanan');
+      const isPortfolioSubpage = rawPath.includes('/portofolio/') || rawPath.includes('portofolio');
+      const isBlogSubpage = rawPath.includes('/blog/') || rawPath.includes('blog');
+
       // Check if this link represents the current page
-      const isHomeLink = linkHref === '/' || linkHref === 'index.html' || linkHref === '../index.html';
-      const isAtHome = (currentPath === 'index.html' || currentPath === '' || window.location.pathname === '/' || window.location.pathname === '');
+      const isHomeLink = linkClean === '/' || linkSlug === 'index';
+      const isAtHome = rawPath === '/' || currentSlug === 'index';
+
       const isCurrentPage = (isHomeLink && isAtHome) ||
-                            (!isHomeLink && linkPath === currentPath) || 
-                            (isServiceSubpage && linkPath === 'layanan.html') ||
-                            (isPortfolioSubpage && linkPath === 'portofolio.html') ||
-                            (isBlogSubpage && linkPath === 'blog.html');
+                            (!isHomeLink && (linkClean === rawPath || linkSlug === currentSlug)) || 
+                            (isServiceSubpage && linkSlug === 'layanan' && isTopLevel) ||
+                            (isPortfolioSubpage && linkSlug === 'portofolio' && isTopLevel) ||
+                            (isBlogSubpage && linkSlug === 'blog' && isTopLevel);
 
       if (isTopLevel) {
-        // Top-level link always stays active if it represents the current page
         if (isCurrentPage) {
           link.classList.add('active');
         } else {
-          // If on single page with hash anchors
           if (currentHash && link.hash === currentHash) {
             link.classList.add('active');
           } else if (!link.hash) {
@@ -253,8 +256,9 @@
           }
         }
       } else if (isDropdownChild) {
-        // In dropdown: highlight if hash matches current section
-        if (currentHash && link.hash === currentHash) {
+        if ((linkClean === rawPath || linkSlug === currentSlug) && !link.hash) {
+          link.classList.add('active');
+        } else if (currentHash && link.hash === currentHash) {
           link.classList.add('active');
         } else {
           link.classList.remove('active');
