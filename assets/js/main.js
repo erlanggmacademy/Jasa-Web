@@ -202,12 +202,13 @@
     const rawPath = window.location.pathname.replace(/\/$/, '') || '/';
     const currentSlug = rawPath.replace(/\.html$/, '').split('/').pop() || 'index';
     
-    // Find section matching active hash in navmenu if any
+    // Find section matching active hash in navmenu only if hash links exist
     let currentHash = null;
     const position = window.scrollY + 200;
+    const hashLinks = Array.from(navmenulinks).filter(link => link.hash && link.hash.startsWith('#'));
 
-    navmenulinks.forEach(link => {
-      if (link.hash && link.hash.startsWith('#')) {
+    if (hashLinks.length > 0) {
+      hashLinks.forEach(link => {
         try {
           const section = document.querySelector(link.hash);
           if (section) {
@@ -215,11 +216,9 @@
               currentHash = link.hash;
             }
           }
-        } catch (err) {
-          // ignore invalid selectors
-        }
-      }
-    });
+        } catch (err) {}
+      });
+    }
 
     navmenulinks.forEach(link => {
       const linkHref = link.getAttribute('href');
