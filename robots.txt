@@ -9,13 +9,16 @@
 User-agent: *
 Allow: /
 
-# Izinkan rendering penuh seluruh aset web (CSS, JS, Gambar, Vendor)
+# Izinkan rendering penuh seluruh aset web (CSS, JS, Gambar, Vendor, Manifest)
 Allow: /assets/css/
 Allow: /assets/js/
 Allow: /assets/img/
 Allow: /assets/vendor/
+Allow: /site.webmanifest
 
-# Blokir akses ke file internal, dokumentasi markdown, dan file konfigurasi
+# Blokir halaman error 404 dan file internal/konfigurasi
+Disallow: /404
+Disallow: /404.html
 Disallow: /*.md$
 Disallow: /*.json$
 Disallow: /.*

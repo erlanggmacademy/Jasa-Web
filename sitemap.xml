@@ -45,6 +45,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://optisitus.web.id/sitemap</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- Subhalaman Layanan Spesifik -->
   <url>
@@ -107,19 +113,19 @@
   <!-- Artikel Blog Edukasi & Strategi Bisnis -->
   <url>
     <loc>https://optisitus.web.id/blog/biaya-pembuatan-website-banyuwangi</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://optisitus.web.id/blog/5-alasan-medsos-kurang-cukup-bisnis-lokal</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://optisitus.web.id/blog/strategi-website-homestay-tour-wisata-ijen</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -1,0 +1,24 @@
+{
+  "name": "OptiSitus - Jasa Pembuatan Website Banyuwangi",
+  "short_name": "OptiSitus",
+  "description": "Jasa pembuatan website profesional, cepat, responsif, dan SEO-ready untuk UMKM dan bisnis di Banyuwangi.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a1020",
+  "theme_color": "#0a1020",
+  "icons": [
+    {
+      "src": "/assets/img/favicon.webp",
+      "sizes": "192x192 220x220",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/apple-touch-icon.webp",
+      "sizes": "512x512 562x562",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}

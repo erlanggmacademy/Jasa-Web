@@ -1021,8 +1021,24 @@ section,
     padding: 70px 0 50px;
   }
 
+  .hero .status {
+    font-size: 11.5px;
+    padding: 4px 12px;
+    gap: 6px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    line-height: 1.35;
+    max-width: 95%;
+  }
+
+  .hero .status .ping {
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color) 20%, transparent);
+  }
+
   .hero h1 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .hero .actions .btn-main,
@@ -1102,6 +1118,10 @@ section,
   margin-bottom: 56px;
 }
 
+.about .counters > [class*="col-"] {
+  display: flex;
+}
+
 .about .counters .counter {
   text-align: center;
   padding: 32px 16px;
@@ -1109,25 +1129,62 @@ section,
   background: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--default-color) 8%, transparent);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .about .counters .counter .purecounter,
 .about .counters .counter .plus {
-  font-size: 44px;
   font-weight: 700;
   font-family: var(--heading-font);
   color: var(--accent-color);
   line-height: 1;
 }
 
+.about .counters .counter .purecounter {
+  font-size: 40px;
+}
+
 .about .counters .counter .plus {
+  font-size: 24px;
+  font-weight: 600;
   margin-left: 2px;
+  vertical-align: baseline;
 }
 
 .about .counters .counter p {
   margin: 10px 0 0;
   font-size: 15px;
   color: var(--default-color);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .about .counters .counter {
+    padding: 20px 10px;
+    border-radius: 14px;
+  }
+
+  .about .counters .counter .purecounter {
+    font-size: 28px;
+  }
+
+  .about .counters .counter .plus {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 2px;
+  }
+
+  .about .counters .counter p {
+    font-size: 12px;
+    margin-top: 6px;
+    line-height: 1.35;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1469,9 +1526,22 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Testimonials Section
+# Testimonials Section (Swiper Slider)
 --------------------------------------------------------------*/
+.testimonials .testimonials-slider {
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0 16px;
+}
+
+.testimonials .swiper-slide {
+  height: auto;
+  display: flex;
+  box-sizing: border-box;
+}
+
 .testimonials .q-card {
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 32px 28px;
@@ -1484,6 +1554,110 @@ section,
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+}
+
+.testimonials .q-card:hover {
+  transform: translateY(-5px);
+  border-color: color-mix(in srgb, var(--accent-color) 45%, transparent);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.testimonials .testimonials-controls {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonials .testimonials-nav-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #111a2e;
+  border: 1px solid color-mix(in srgb, var(--accent-color) 35%, transparent);
+  color: var(--accent-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+  flex-shrink: 0;
+  outline: none;
+}
+
+.testimonials .testimonials-nav-btn:hover {
+  background: linear-gradient(135deg, #0284c7, #1d4ed8);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 24px rgba(2, 132, 199, 0.45);
+}
+
+.testimonials .testimonials-nav-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.testimonials .testimonials-nav-btn.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.testimonials .testimonials-pagination {
+  width: auto !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.testimonials .testimonials-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 !important;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--default-color) 35%, transparent);
+  opacity: 1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.testimonials .testimonials-pagination .swiper-pagination-bullet-active {
+  width: 28px;
+  background: var(--accent-color);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--accent-color) 70%, transparent);
+}
+
+@media (max-width: 768px) {
+  .testimonials .testimonials-slider {
+    padding-bottom: 8px;
+  }
+
+  .testimonials .q-card {
+    padding: 24px 20px;
+    border-radius: 18px;
+    width: 100%;
+  }
+
+  .testimonials .q-card blockquote {
+    font-size: 14.5px;
+    line-height: 1.65;
+    margin: 0 0 18px;
+  }
+
+  .testimonials .testimonials-controls {
+    margin-top: 24px;
+    gap: 16px;
+  }
+
+  .testimonials .testimonials-nav-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
 }
 
 .testimonials .q-card:hover {
@@ -1855,12 +2029,24 @@ section,
   color: color-mix(in srgb, var(--default-color) 75%, transparent);
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
   .contact .php-email-form {
-    padding: 24px 18px;
+    padding: 22px 16px;
   }
+
   .contact .php-email-form .btn-submit {
-    width: 100%;
+    font-size: 13.5px;
+    padding: 10px 22px;
+    gap: 8px;
+    border-radius: 30px;
+    width: auto;
+    max-width: 100%;
+    margin: 6px auto 0;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+  }
+
+  .contact .php-email-form .btn-submit i {
+    font-size: 15px;
   }
 }
 
@@ -2248,11 +2434,52 @@ section,
   font-weight: 500;
   color: var(--heading-color);
   backdrop-filter: blur(8px);
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .hero-badge-item i {
   color: var(--accent-color);
   font-size: 15px;
+}
+
+@media (max-width: 576px) {
+  .hero-badges {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 22px;
+    width: 100%;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-badge-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 9px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    line-height: 1.3;
+    gap: 6px;
+    width: 100%;
+    height: 100%;
+    min-height: 52px;
+    box-sizing: border-box;
+  }
+
+  .hero-badge-item i {
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 340px) {
+  .hero-badges {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Sectors Grid */

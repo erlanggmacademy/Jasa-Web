@@ -165,19 +165,25 @@
    * Init swiper sliders
    */
   function initSwiper() {
+    if (typeof Swiper === 'undefined') return;
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
+      if (swiperElement.swiper) return;
+      let configEl = swiperElement.querySelector(".swiper-config");
+      if (!configEl) return;
+      try {
+        let config = JSON.parse(configEl.innerHTML.trim());
+        if (swiperElement.classList.contains("swiper-tab")) {
+          initSwiperWithCustomPagination(swiperElement, config);
+        } else {
+          new Swiper(swiperElement, config);
+        }
+      } catch (err) {
+        console.error("Swiper init error:", err);
       }
     });
   }
 
+  document.addEventListener("DOMContentLoaded", initSwiper);
   window.addEventListener("load", initSwiper);
 
   /**
