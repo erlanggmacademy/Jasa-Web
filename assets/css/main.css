@@ -1138,6 +1138,19 @@ section,
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
+.about .counters .counter:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--accent-color) 35%, transparent);
+}
+
+.about .counters .counter .counter-number {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  white-space: nowrap;
+  line-height: 1;
+}
+
 .about .counters .counter .purecounter,
 .about .counters .counter .plus {
   font-weight: 700;
@@ -1152,7 +1165,7 @@ section,
 
 .about .counters .counter .plus {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   margin-left: 2px;
   vertical-align: baseline;
 }
@@ -1176,7 +1189,7 @@ section,
 
   .about .counters .counter .plus {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     margin-left: 2px;
   }
 
